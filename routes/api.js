@@ -186,7 +186,7 @@ if (h >= 4 && h < 10) {
   if (h >= 14 && h < 15) {
   var listkey = 'oflen'
   }
-  if (h >= 15 || h < 4) { 
+  if (h >= 16 || h < 4) { 
   var listkey = 'rxking'
   }
 
