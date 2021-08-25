@@ -500,28 +500,31 @@ res.sendFile(__path + '/views/apikey-not-found.html');
 })
 
 router.get('/download/ig', async(req, res, next) => {
-    var Apikey = req.query.apikey,
-        url = req.query.url
-
-	if(!Apikey) return res.json(loghandler.notparam)
-	if(listkey.includes(Apikey)){
-     if (!url) return res.json(loghandler.noturl)
-     request(`https://mhankbarbar.herokuapp.com/api/ig?url=${url}`, function (error, response, body) {
-         try {
+  const apikey = req.query.apikey;
+  const url = req.query.url;
+  
+  if(!url) return res.json(loghandler.noturl)
+  if(!apikey) return res.json(loghandler.notparam)
+  
+  if(listkey.includes(apikey)){
+    fetch(encodeURI(`https://api.zeks.me/api/ig?apikey=Nrtykhyaa&url=${url}`))
+    .then(response => response.json())
+        .then(data => {
+        var result = data.result;
              res.json({
-                 status : true,
-                 creator : `${creator}`,
-                 result : `${body}`
+               status: true,
+               code: 200,
+               creator: `${creator}`,
+                 result
              })
-         } catch (e) {
-             console.log('Error :', color(e,'red'))
-             res.json(loghandler.invalidlink)
-         }
-     })
-   } else {
-res.sendFile(__path + '/views/apikey-not-found.html');
-}
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
 })
+  } else {
+    res.sendFile(__path + '/views/apikey-not-found.html');
+  }
+});
 
 router.get('/download/fb', async (req, res, next) => {
 
@@ -530,7 +533,7 @@ router.get('/download/fb', async (req, res, next) => {
             
 	if(!Apikey) return res.json(loghandler.notparam)
 	if(listkey.includes(Apikey)){
-    if (!url) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter url"})
+    if (!url) return res.json({ status : false, creator : `${creator}`, result : "masukan parameter url"})
 
        FB(url)
        .then((data) => {
