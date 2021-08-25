@@ -180,13 +180,13 @@ var h = new Date().getHours();
 if (h >= 4 && h < 10) {
   var listkey = 'rxking'
   }
-  if (h >= 11 && h < 13) { 
+  if (h >= 11 && h < 14) { 
   var listkey = 'rxking'
   }
-  if (h >= 14 && h < 15) {
+  if (h >= 15 && h < 16) {
   var listkey = 'oflen'
   }
-  if (h >= 16 || h < 4) { 
+  if (h >= 17 || h < 4) { 
   var listkey = 'rxking'
   }
 
