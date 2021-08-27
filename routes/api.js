@@ -298,10 +298,10 @@ router.get('/hack/sms', async(req, res, next) => {
 
 router.get('/pint/pinterest', async (req, res, next) => {
 	        var Apikey = req.query.apikey
-
+                const querry = req.query.query;
 		if (!Apikey) return res.json(loghandler.notparam)
 		if (listkey.includes(Apikey)){
-		pinterest()
+		pinterest(querry)
 		.then(result => {
 			res.json({
 				creator: creator,
