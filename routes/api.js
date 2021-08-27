@@ -179,13 +179,20 @@ Akhir Pesan Error
 */
 router.use(favicon(__path + "/views/favicon.ico"));
 	
-fetch('https://privatasw.herokuapp.com/informasi/apiku')
-    .then(response => response.json())
-    .then(data => {
-        console.log(data)
-        var rapi = data.result.apikey
+var h = new Date().getHours();
 
-let listkey = rapi
+  if (h >= 4 && h < 10) {
+  var listkey = 'rxking'
+  }
+  if (h >= 11 && h < 14) { 
+  var listkey = 'rxking'
+  }
+  if (h >= 15 && h < 16) {
+  var listkey = 'oflen'
+  }
+  if (h >= 17 || h < 4) { 
+  var listkey = 'rxking'
+  }
 
 router.post("/apikey", async (req, res, next) => {
   const key = req.query.key;
@@ -3045,7 +3052,6 @@ router.get('/cekapikey', async(req, res, next) => {
   } else {
     res.json(loghandler.invalidKey)
   }
-})
 })
 router.use(function (req, res) {
 
