@@ -2924,7 +2924,7 @@ router.get('/maker/ttp', async (req, res, next) => {
   if(!Apikey) return res.json(loghandler.notparam)
   if(listkey.includes(Apikey)) {
   random = new Date
-data = await fetch(`https://api.areltiyan.site/sticker_maker?text=${encodeURIComponent(req.query.text)}`).then(v => v.json())
+data = await fetch(`http://fxc7-api.herokuapp.com/api/maker/ttp?apikey=e5mX2Gd9&text=${encodeURIComponent(req.query.text)}`).then(v => v.json())
          base64 = data.base64
          var buffer = base64.slice(22)
          await fs.writeFileSync(__path +`/tmp/ttp.png`, buffer, 'base64')
@@ -2942,7 +2942,7 @@ router.get('/maker/attp', async(req, res, next) => {
   if(!apikey) return res.json(loghandler.notparam)
   
   if(listkey.includes(apikey)) {
-  let hasil = 'https://alpin-api-2021.herokuapp.com/api/attp?text='+ text +'&apikey=alpin1'
+  let hasil = 'http://fxc7-api.herokuapp.com/api/maker/attp?apikey=e5mX2Gd9&text='+ text
   data = await fetch(hasil).then(v => v.buffer())
   await fs.writeFileSync(__path +'/tmp/attp.gif', data)
   res.sendFile(__path +'/tmp/attp.gif')
