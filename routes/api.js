@@ -2917,22 +2917,22 @@ router.get("/maker/silver-button", async (req, res, next) => {
   }
 })
 
-router.get('/maker/ttp', async (req, res, next) => {
+router.get('/maker/ttp', async(req, res, next) => {
 
-  Apikey = req.query.apikey;
-  if (!req.query.text) return res.json({ status: 404, error: 'masukkan parameter text'})
-  if(!Apikey) return res.json(loghandler.notparam)
-  if(listkey.includes(Apikey)) {
-  random = new Date
-data = await fetch(`http://fxc7-api.herokuapp.com/api/maker/ttp?apikey=e5mX2Gd9&text=${encodeURIComponent(req.query.text)}`).then(v => v.json())
-         base64 = data.base64
-         var buffer = base64.slice(22)
-         await fs.writeFileSync(__path +`/tmp/ttp.png`, buffer, 'base64')
-        res.sendFile(__path+'/tmp/ttp.png')
+  const text = req.query.text;
+  const apikey = req.query.apikey;
+  if(!text) return res.json(loghandler.nottext)
+  if(!apikey) return res.json(loghandler.notparam)
+  
+  if(listkey.includes(apikey)) {
+  let hasil = 'http://fxc7-api.herokuapp.com/api/maker/ttp?apikey=e5mX2Gd9&text='+ text
+  data = await fetch(hasil).then(v => v.buffer())
+  await fs.writeFileSync(__path +'/tmp/attp.gif', data)
+  res.sendFile(__path +'/tmp/attp.gif')
   } else {
     res.json(loghandler.invalidKey)
   }
-});
+})
 
 router.get('/maker/attp', async(req, res, next) => {
 
