@@ -184,7 +184,6 @@ fetch('https://privatasw.herokuapp.com/informasi/apiku')
     .then(data => {
         console.log(data)
         var rapi = data.result.apikey
-    })
 
 let listkey = rapi
 
@@ -3047,7 +3046,7 @@ router.get('/cekapikey', async(req, res, next) => {
     res.json(loghandler.invalidKey)
   }
 })
-
+})
 router.use(function (req, res) {
 
     res.status(404)
