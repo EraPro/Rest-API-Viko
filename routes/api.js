@@ -296,24 +296,29 @@ router.get('/hack/sms', async(req, res, next) => {
 }
 })
 
-router.get('/pint/pinterest', async (req, res, next) => {
-	        var Apikey = req.query.apikey
-                const querry = req.query.query;
-		if (!Apikey) return res.json(loghandler.notparam)
-		if (listkey.includes(Apikey)){
-		pinterest(querry)
-		.then(result => {
-			res.json({
-				creator: creator,
-				result
-			})
-		})
-		.catch(e => {
-			console.log('Error :', color(e, 'red'))
-			res.json(loghandler.error)
-		})
-	} else {
- res.sendFile(__path + '/views/apikey-not-found.html');
+router.get('/pint/pinterest', async(req, res, next) => {
+  const apikey = req.query.apikey;
+  const query = req.query.query;
+  if(!apikey) return res.json(loghandler.notparam)
+  if(!query) return res.json(loghandler.notquery)
+  
+  if(listkey.includes(apikey)){
+  fetch(encodeURI(`http://fxc7-api.herokuapp.com/api/search/pinterest?apikey=e5mX2Gd9&query=${query}`))
+  .then(response => response.json())
+        .then(hasil => {
+
+        var result = hasil.result;
+             res.json({
+                 status : true,
+                 creator : `${creator}`,
+                 result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+} else {
+  res.sendFile(__path + '/views/apikey-not-found.html');
 }
 })
 
