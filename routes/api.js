@@ -711,10 +711,10 @@ router.get('/random/pantun', async (req, res, next) => {
 	if(!Apikey) return res.json(loghandler.notparam)
 	if(listkey.includes(Apikey)){
 
-       fetch(encodeURI(`https://api.zeks.xyz/api/pantun?apikey=xF6BnMYUJzaPtRj7iOIDS9FCFvJ&=`))
+       fetch(encodeURI(`http://fxc7-api.herokuapp.com/api/random/pantun?apikey=e5mX2Gd9`))
         .then(response => response.json())
         .then(data => {
-        var result = data;
+        var result = data.result;
              res.json({
                  creator : `${creator}`,
                  result
