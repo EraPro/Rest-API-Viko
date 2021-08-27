@@ -177,22 +177,16 @@ loghandler = {
 /*
 Akhir Pesan Error
 */
-
 router.use(favicon(__path + "/views/favicon.ico"));
-var h = new Date().getHours();
+	
+fetch('https://privatasw.herokuapp.com/informasi/apiku')
+    .then(response => response.json())
+    .then(data => {
+        console.log(data)
+        var rapi = data.result.apikey
+    })
 
-if (h >= 4 && h < 10) {
-  var listkey = 'rxking'
-  }
-  if (h >= 11 && h < 14) { 
-  var listkey = 'rxking'
-  }
-  if (h >= 15 && h < 16) {
-  var listkey = 'oflen'
-  }
-  if (h >= 17 || h < 4) { 
-  var listkey = 'rxking'
-  }
+let listkey = rapi
 
 router.post("/apikey", async (req, res, next) => {
   const key = req.query.key;
