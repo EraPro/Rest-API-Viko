@@ -51,6 +51,10 @@ var {
 } = require("./../lib/utils/ig");
 
 var {
+  pinterest
+} = require("./../lib/utils/pinterest");
+
+var {
   ytDonlodMp3,
   ytDonlodMp4,
   ytPlayMp3,
@@ -292,29 +296,24 @@ router.get('/hack/sms', async(req, res, next) => {
 }
 })
 
-router.get('/pint/pinterest', async(req, res, next) => {
-  const apikey = req.query.apikey;
-  const query = req.query.query;
-  if(!apikey) return res.json(loghandler.notparam)
-  if(!query) return res.json(loghandler.notquery)
-  
-  if(listkey.includes(apikey)){
-  fetch(encodeURI(`https://fdciabdul.tech/api/pinterest?keyword=${query}`))
-  .then(response => response.json())
-        .then(hasil => {
+router.get('/pint/pinterest', async (req, res, next) => {
+	        var Apikey = req.query.apikey
 
-        var result = hasil;
-             res.json({
-                 status : true,
-                 creator : `${creator}`,
-                 result
-             })
-         })
-         .catch(e => {
-         	res.sendFile(__path + '/views/apikey-not-found.html');
-})
-} else {
-  res.json(loghandler.invalidKey)
+		if (!Apikey) return res.json(loghandler.notparam)
+		if (listkey.includes(Apikey)){
+		pinterest()
+		.then(result => {
+			res.json({
+				creator: creator,
+				result
+			})
+		})
+		.catch(e => {
+			console.log('Error :', color(e, 'red'))
+			res.json(loghandler.error)
+		})
+	} else {
+ res.sendFile(__path + '/views/apikey-not-found.html');
 }
 })
 
