@@ -296,6 +296,32 @@ router.get('/hack/sms', async(req, res, next) => {
 }
 })
 
+router.get('/textmaker/quoteser', async(req, res, next) => {
+  const apikey = req.query.apikey;
+  const query = req.query.query;
+  if(!apikey) return res.json(loghandler.notparam)
+  if(!query) return res.json(loghandler.notquery)
+  
+  if(listkey.includes(apikey)){
+  fetch(encodeURI(`https://viko-textmaker.herokuapp.com/api/textmaker?text=${query}`))
+  .then(response => response.json())
+        .then(hasil => {
+
+        var result = hasil.results;
+             res.json({
+                 status : true,
+                 creator : `${creator}`,
+                 result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+} else {
+  res.sendFile(__path + '/views/apikey-not-found.html');
+}
+})
+
 router.get('/pint/pinterest', async(req, res, next) => {
   const apikey = req.query.apikey;
   const query = req.query.query;
