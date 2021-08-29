@@ -190,7 +190,7 @@ router.use(favicon(__path + "/views/favicon.ico"));
   }
   if (h >= 16 || h < 4) { 
   var listkey = 'rxking'
-  }'
+  }
 
 router.post("/apikey", async (req, res, next) => {
   const key = req.query.key;
