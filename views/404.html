@@ -15,7 +15,48 @@
   <link href="https://studiovdk.herokuapp.com/main-menu/css/ruang-admin.min.css" rel="stylesheet">
 
 </head>
+<style>
 
+a{
+  display: block;
+  width: 200px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 18px;
+  font-family: sans-serif;
+  text-decoration: none;
+  color: #34bdeb;
+  border: 2px solid #05a3f7;
+  letter-spacing: 2px;
+  text-align: center;
+  position: relative;
+  transition: all .35s;
+}
+
+a span{
+  position: relative;
+  z-index: 2;
+}
+
+a:after{
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #05a3f7;
+  transition: all .35s;
+}
+
+a:hover{
+  color: #fff;
+}
+
+a:hover:after{
+  width: 100%;
+}
+</style>
 <body class="bg-gradient-login">
   <!-- Login Content -->
   <div class="container-login">
@@ -36,7 +77,10 @@
 </lord-icon>
                   </div>
                   <h5><strong>404 API NOT FOUND</strong></h5>
-                  <p class="text-xs font-weight-bold text-uppercase mb-4">KEMUNGKINAN:<br><br>- Script JS kemungkinan dihapus/diperbaiki<br>- Kesalahan mengetik URL params<br>- File mungkin dipindah</p>
+                  <p class="text-xs font-weight-bold text-uppercase mb-4">KEMUNGKINAN:<br><br>- Script JS kemungkinan dihapus/diperbaiki<br>- Kesalahan mengetik URL params<br>- File mungkin dipindah</p><br>
+                  <center><a href="https://viko-api.herokuapp.com/docs"><span>HOME</span></a></center><br>
+                  <center><p>V i k o d e v</p>
+                  </center>
                 </div>
               </div>
             </div>
