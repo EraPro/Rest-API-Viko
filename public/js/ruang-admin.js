@@ -1,11 +1,12 @@
 arrBulan = ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"];
 var txt = "";
+let storage = await navigator.storage.estimate();
 txt += "<p><b>Browser</b>: " + navigator.appCodeName + "</p>";
 txt += "<p><b>Cookies</b>: " + navigator.cookieEnabled + "</p>";
 txt += "<p><b>Platform</b>: " + navigator.platform + "</p>";
 txt += "<p><b>User Agent</b>: " + navigator.userAgent + "</p>";
 txt += "<p><b>App name</b>: " + navigator.appName + "</p>";
-txt += "<p><b>Storage</b>: " + navigator.storage.estimate(); + " MiB</p>";
+txt += "<p><b>Storage</b>: " + storage.quota/(1024*1024) + "</p>";
 var d = new Date();
 const tgl = d.getDate();
 const bln = d.getMonth();
