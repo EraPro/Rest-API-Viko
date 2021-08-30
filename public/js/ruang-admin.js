@@ -5,7 +5,7 @@ navigator.getBattery()
   .then(function(battery) {
     console.log(battery.level);
 	var batre = battery.level
-})
+
 
 txt += "<p><b>Browser</b>: " + navigator.appCodeName + "</p>";
 txt += "<p><b>Cookies</b>: " + navigator.cookieEnabled + "</p>";
@@ -13,6 +13,7 @@ txt += "<p><b>Platform</b>: " + navigator.platform + "</p>";
 txt += "<p><b>User Agent</b>: " + navigator.userAgent + "</p>";
 txt += "<p><b>App name</b>: " + navigator.appName + "</p>";
 txt += "<p><b>Battery</b>: </p>" + batre + "<p>%</p>";
+});
 var d = new Date();
 const tgl = d.getDate();
 const bln = d.getMonth();
