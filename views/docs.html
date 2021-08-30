@@ -597,6 +597,25 @@
               </div>
             </div>
           </div>
+            <div class="col-xl-4 col-md-6 mb-4">
+              <div class="card h-100">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-xs font-weight-bold text-uppercase mb-1">SHELL_EXEC</div>
+                      <script>
+                      <?php
+
+$output = shell_exec('cat /etc/*release | grep PRETTY_NAME;echo;free -m');
+Echo '<pre>$output</pre>';
+
+?>
+</script>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
             <div class="col-xl-5 col-md-7 mb-4">
               <form action="/api/cekapikey">
               <div class="card h-100">
