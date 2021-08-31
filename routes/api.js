@@ -1027,10 +1027,10 @@ router.get('/info/cuaca', async(req, res, next) => {
   if(!apikey) return res.json(loghandler.notparam)
   
   if(listkey.includes(apikey)){
-    fetch(encodeURI(`http://docs-jojo.herokuapp.com/api/cuaca?q=${url}`))
+    fetch(encodeURI(`https://freerestapi.herokuapp.com/api/cuaca?p=${url}`))
     .then(response => response.json())
         .then(data => {
-        var result = data;
+        var result = data.hasil;
              res.json({
                status: true,
                code: 200,
@@ -1989,7 +1989,7 @@ router.get('/kuis/caklontong', async (req, res, next) => {
         var Apikey = req.query.apikey
 	if(!Apikey) return res.json(loghandler.notparam)
 	if(listkey.includes(Apikey)){
-       fetch(encodeURI(`https://docs-api-zahirrr.herokuapp.com/api/quote?type=caklontong`))
+       fetch(encodeURI(`https://freerestapi.herokuapp.com/api/ttscl`))
         .then(response => response.json())
         .then(data => {
         var result = data;
