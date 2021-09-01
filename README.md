@@ -8,16 +8,6 @@
 > git clone https://github.com/vikodk67/Rest-API.git
 > cd Rest-API
 ```
-<h2>Camra push ke heroku</h2>
-<p>
-> cd Rest-API<br>
-> git init<br>
-> git remote: -a Situs yang lu buat misal<br>
-> git remote: -a studio-pedeka<br>
-> git add "."<br>
-> git commit "."<br>
-> git push heroku master<br>
-</p>
 <p>jika ada perubahan , silahkan ikuti tumtor diatas secara berulang</p>
 <h3>Thanks to:</h3>
 <p>- Tobz API<br>- Zahirr<br>- Itskhyaa<br>- Jojo API<br>- Zeks API</p>
