@@ -735,14 +735,14 @@ router.get('/stalk/npm', async (req, res, next) => {
 res.sendFile(__path + '/views/apikey-not-found.html');
 }
 })
-
-router.get('/random/cerpen', async (req, res, next) => {
+////New by itskhyaa
+router.get('/cerpen/random', async (req, res, next) => {
         var Apikey = req.query.apikey
             
 	if(!Apikey) return res.json(loghandler.notparam)
 	if(listkey.includes(Apikey)){
 
-       fetch(encodeURI(`http://viko-cerpenmu.herokuapp.com/`))
+       fetch(encodeURI(`https://privatasw.herokuapp.com/cerita/random`))
         .then(response => response.json())
         .then(data => {
         var result = data;
@@ -759,6 +759,77 @@ res.sendFile(__path + '/views/apikey-not-found.html');
 }
 })
 
+router.get('/cerpen/cinta', async (req, res, next) => {
+        var Apikey = req.query.apikey
+            
+	if(!Apikey) return res.json(loghandler.notparam)
+	if(listkey.includes(Apikey)){
+
+       fetch(encodeURI(`https://privatasw.herokuapp.com/cerita/cinta`))
+        .then(response => response.json())
+        .then(data => {
+        var result = data;
+             res.json({
+                 creator : `${creator}`,
+                 result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+} else {
+res.sendFile(__path + '/views/apikey-not-found.html');
+}
+})
+
+router.get('/cerpen/horor', async (req, res, next) => {
+        var Apikey = req.query.apikey
+            
+	if(!Apikey) return res.json(loghandler.notparam)
+	if(listkey.includes(Apikey)){
+
+       fetch(encodeURI(`https://privatasw.herokuapp.com/cerita/horor`))
+        .then(response => response.json())
+        .then(data => {
+        var result = data;
+             res.json({
+                 creator : `${creator}`,
+                 result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+} else {
+res.sendFile(__path + '/views/apikey-not-found.html');
+}
+})
+
+router.get('/darkjokes', async (req, res, next) => {
+        var Apikey = req.query.apikey
+            
+	if(!Apikey) return res.json(loghandler.notparam)
+	if(listkey.includes(Apikey)){
+
+       fetch(encodeURI(`https://privatasw.herokuapp.com/darkjokes`))
+        .then(response => response.json())
+        .then(data => {
+        var result = data.result;
+             res.json({
+                 creator : `${creator}`,
+                 result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+} else {
+res.sendFile(__path + '/views/apikey-not-found.html');
+}
+})
+
+////Akhir update by Itskhyaa
+
 router.get('/random/quotes', async (req, res, next) => {
         var Apikey = req.query.apikey
             
@@ -768,7 +839,7 @@ router.get('/random/quotes', async (req, res, next) => {
        fetch(encodeURI(`https://api.zeks.xyz/api/quote?apikey=pikodeka67`))
         .then(response => response.json())
         .then(data => {
-        var result = data;
+        var result = data.result;
              res.json({
                  creator : `${creator}`,
                  result
