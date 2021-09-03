@@ -1992,10 +1992,7 @@ router.get('/kuis/caklontong', async (req, res, next) => {
        fetch(encodeURI(`https://docs-api-zahirrr.herokuapp.com/api/quote?type=caklontong`))
         .then(response => response.json())
         .then(data => {
-        var result = {data.soal,
-		      data.jawaban, 
-		      data.deskripsi
-                     };
+        var result = data;
              res.json({
                  result
              })
