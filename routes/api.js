@@ -1541,6 +1541,8 @@ router.get('/search/image', async(req, res, next) => {
   }
 })
 
+//Tandai(walper)
+
 router.get('/wallpaper/cyberspace', async (req, res, next) => {
         var Apikey = req.query.apikey
             
@@ -1614,11 +1616,17 @@ router.get('/wallpaper/programming', async (req, res, next) => {
 	if(!Apikey) return res.json(loghandler.notparam)
 	if(listkey.includes(Apikey)){
 
-  const Progam = JSON.parse(fs.readFileSync(__path +'/data/Programming.json'));
-  const randProgam = Progam[Math.floor(Math.random() * Progam.length)];
-  data = await fetch(randProgam).then(v => v.buffer())
-  await fs.writeFileSync(__path +'/tmp/Programming.jpeg', data)
-  res.sendFile(__path +'/tmp/Programming.jpeg')
+       fetch(encodeURI(`https://privatasw.herokuapp.com/lariadahemkel/programming`))
+        .then(response => response.json())
+        .then(data => {
+        var result = data.result;
+             res.json({
+                 result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
 } else {
 res.json(loghandler.invalidKey)
 }
@@ -1631,11 +1639,17 @@ router.get('/wallpaper/pegunungan', async (req, res, next) => {
 	if(!Apikey) return res.json(loghandler.notparam)
 	if(listkey.includes(Apikey)){
 
-  const Mount = JSON.parse(fs.readFileSync(__path +'/data/Mountain.json'));
-  const randMount = Mount[Math.floor(Math.random() * Mount.length)];
-  data = await fetch(randMount).then(v => v.buffer());
-  await fs.writeFileSync(__path +'/tmp/Mountain.jpeg', data)
-  res.sendFile(__path+ '/tmp/Mountain.jpeg');
+       fetch(encodeURI(`https://privatasw.herokuapp.com/montain/gunung`))
+        .then(response => response.json())
+        .then(data => {
+        var result = data.result;
+             res.json({
+                 result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
 } else {
 res.json(loghandler.invalidKey)
 }
