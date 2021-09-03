@@ -1989,7 +1989,7 @@ router.get('/kuis/caklontong', async (req, res, next) => {
         var Apikey = req.query.apikey
 	if(!Apikey) return res.json(loghandler.notparam)
 	if(listkey.includes(Apikey)){
-       fetch(encodeURI(`https://freerestapi.herokuapp.com/api/ttscl`))
+       fetch(encodeURI(`https://docs-api-zahirrr.herokuapp.com/api/quote?type=caklontong`))
         .then(response => response.json())
         .then(data => {
         var result = data;
