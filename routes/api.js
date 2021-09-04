@@ -222,6 +222,30 @@ router.delete("/apikey", async(req, res, next) => {
  }
 });
 
+////////
+router.get('/artinama', async (req, res, next) => {
+	var nama = req.query.nama;
+        var Apikey = req.query.apikey;
+   
+    if(!nama) return res.json('masukkan parameter nama')    
+	if(!Apikey) return res.json(loghandler.notparam)
+	if(listkey.includes(Apikey)){
+
+  const jeneng = JSON.parse(fs.readFileSync(__path +'/data/jeneng.json'));
+  const result = jeneng[Math.floor(Math.random() * jeneng.length)];
+  res.json({
+  	           status : true,
+  	           creator : `${creator}`,
+  	           nama,
+                 result
+             })
+} else {
+res.json(loghandler.invalidKey)
+}
+})
+
+
+
 router.get('/music/joox', async(req, res, next) => {
   const query = req.query.query;
   const apikey = req.query.apikey;
