@@ -398,6 +398,28 @@ router.get('/pint/pinterest', async(req, res, next) => {
   res.sendFile(__path + '/views/apikey-not-found.html');
 }
 })
+////Add scrapper Itskhyaa
+router.get("/pinterest", async(req, res, next) => {
+	const apikey = req.query.apikey;
+        const query = req.query.query;
+  if(!apikey) return res.json(loghandler.notparam)
+  if(!query) return res.json(loghandler.notquery)
+  
+  if(listkey.includes(apikey)){
+	  pinterest(query)
+	  .then((result) => {
+		  res.json({
+			  result
+		  });
+	  })
+	  .catch((error) => {
+		  res.json((error);
+			   });
+  } else {
+	  res.sendFile(__path + '/views/apikey-not-found.html');
+}
+})
+	  
 
 router.get('/f/simi', async(req, res, next) => {
   const apikey = req.query.apikey;
