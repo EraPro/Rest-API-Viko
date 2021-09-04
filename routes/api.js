@@ -223,21 +223,19 @@ router.delete("/apikey", async(req, res, next) => {
 });
 
 ////////
-router.get('/artinama', async (req, res, next) => {
-	var nama = req.query.nama;
-        var Apikey = req.query.apikey;
-   
-    if(!nama) return res.json('masukkan parameter nama')    
+router.get('/matematika', async (req, res, next) => {
+
+        var Apikey = req.query.apikey;   
 	if(!Apikey) return res.json(loghandler.notparam)
 	if(listkey.includes(Apikey)){
 
   const jeneng = JSON.parse(fs.readFileSync(__path +'/data/jeneng.json'));
   const result = jeneng[Math.floor(Math.random() * jeneng.length)];
+  
   res.json({
   	           status : true,
   	           creator : `${creator}`,
-  	           nama,
-                 result
+                   result
              })
 } else {
 res.json(loghandler.invalidKey)
