@@ -399,7 +399,28 @@ router.get('/pint/pinterest', async(req, res, next) => {
 }
 })
 ////Add scrapper Itskhyaa
-
+router.get("/pinterest", async(req, res, next) => {
+    const query = req.query.query;
+    const apikey = req.query.apikey;
+    
+    if(!query) return res.json(loghandler.notquery)
+    if(!apikey) return res.json(loghandler.notparam)
+    if(listkey.includes(apikey)){
+    pinterest(query)
+        .then((result) => {
+            res.json({
+		    status : true,
+                    creator : `${creator}`,
+		    result
+	    });
+        })
+        .catch((error) => {
+            res.json(error);
+        });
+      } else {
+       res.sendFile(__path + '/views/apikey-not-found.html');
+      }
+});
 	  
 
 router.get('/f/simi', async(req, res, next) => {
