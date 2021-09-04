@@ -373,31 +373,6 @@ router.get('/textmaker/nulis2', async(req, res, next) => {
 })
 
 
-router.get('/pint/pinterest', async(req, res, next) => {
-  const apikey = req.query.apikey;
-  const query = req.query.query;
-  if(!apikey) return res.json(loghandler.notparam)
-  if(!query) return res.json(loghandler.notquery)
-  
-  if(listkey.includes(apikey)){
-  fetch(encodeURI(`http://fxc7-api.herokuapp.com/api/search/pinterest?apikey=e5mX2Gd9&query=${query}`))
-  .then(response => response.json())
-        .then(hasil => {
-
-        var result = hasil.result;
-             res.json({
-                 status : true,
-                 creator : `${creator}`,
-                 result
-             })
-         })
-         .catch(e => {
-         	res.json(loghandler.error)
-})
-} else {
-  res.sendFile(__path + '/views/apikey-not-found.html');
-}
-})
 ////Add scrapper Itskhyaa
 router.get("/pinterest", async(req, res, next) => {
     const query = req.query.query;
@@ -413,7 +388,7 @@ router.get("/pinterest", async(req, res, next) => {
 		    status : true,
                     creator : `${creator}`,
 		    url_download,
-		    'if' : '@Itskhyaa wa.me/6285821913780?text=Hai%20ikhya%20ganteng'
+		    'author' : '@Itskhyaa wa.me/6285821913780?text=Hai%20ikhya%20ganteng'
 	    });
         })
         .catch((error) => {
