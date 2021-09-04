@@ -413,7 +413,7 @@ router.get("/pinterest", async(req, res, next) => {
 		    status : true,
                     creator : `${creator}`,
 		    url_download,
-		    'Author' : '@Itskhyaa'
+		    'if' : '@Itskhyaa wa.me/6285821913780?text=Hai%20ikhya%20ganteng'
 	    });
         })
         .catch((error) => {
