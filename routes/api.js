@@ -408,10 +408,12 @@ router.get("/pinterest", async(req, res, next) => {
     if(listkey.includes(apikey)){
     pinterest(query)
         .then((result) => {
+	    const url_download = result[Math.floor(Math.random() * result.length)];
             res.json({
 		    status : true,
                     creator : `${creator}`,
-		    result
+		    url_download,
+		    'Author' : '@Itskhyaa'
 	    });
         })
         .catch((error) => {
