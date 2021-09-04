@@ -224,7 +224,31 @@ router.delete("/apikey", async(req, res, next) => {
 
 // LAHAN DIJUAL
 
+router.get('/random/artinama', async(req, res, next) => {
+  const apikey = req.query.apikey;
+  const query = req.query.query;
+  if(!apikey) return res.json(loghandler.notparam)
+  if(!query) return res.json(loghandler.notquery)
+  
+  if(listkey.includes(apikey)){
+  fetch(encodeURI(`https://mnazria.herokuapp.com/api/arti?nama=${query}`))
+  .then(response => response.json())
+        .then(hasil => {
 
+        var result = hasil.result;
+             res.json({
+                 status : true,
+                 creator : `${creator}`,
+                 result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+} else {
+  res.sendFile(__path + '/views/apikey-not-found.html');
+}
+})
 
 router.get('/music/joox', async(req, res, next) => {
   const query = req.query.query;
