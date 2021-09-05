@@ -885,7 +885,7 @@ router.get('/id/epep', async (req, res, next) => {
 	var id = req.query.id;
             
 	if(!Apikey) return res.json(loghandler.notparam)
-	if(!id) return res,json({'Pesan_untuk_anda': 'Masukkin id nya ngen, dah buriq lapan bit, gada pintu, suara kaleng lgi awokwowkwowwok'})
+	if(!id) return res.json({'Pesan_untuk_anda': 'Masukkin id nya ngen, dah buriq lapan bit, gada pintu, suara kaleng lgi awokwowkwowwok'})
 	if(listkey.includes(Apikey)){
 
        fetch(encodeURI(`https://api.nichicodex.xyz/idFF/?id=${id}&type=json`))
