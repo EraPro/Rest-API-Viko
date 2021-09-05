@@ -868,7 +868,7 @@ router.get('/random/couple', async (req, res, next) => {
         .then(data => {
         var result = data.result;
              res.json({
-                 creator : `${creator}`,
+                 creator : `${creator}, Itskhyaa`,
                  result
              })
          })
