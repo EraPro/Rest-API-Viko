@@ -863,7 +863,7 @@ router.get('/random/couple', async (req, res, next) => {
 	if(!Apikey) return res.json(loghandler.notparam)
 	if(listkey.includes(Apikey)){
 
-       fetch(encodeURI(`https://privatasw/couple`))
+       fetch(encodeURI(`https://privatasw.herokuapp.com/couple`))
         .then(response => response.json())
         .then(data => {
         var result = data.result;
