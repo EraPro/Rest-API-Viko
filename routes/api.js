@@ -178,19 +178,7 @@ loghandler = {
 Akhir Pesan Error
 */
 router.use(favicon(__path + "/views/favicon.ico"));
-  var h = new Date().getHours();
-  if (h >= 17 && h < 11) {
-  var listkey = 'rxking'
-  }
-  if (h >= 11 && h < 14) { 
-  var listkey = 'rxking'
-  }
-  if (h >= 14 && h < 16) {
-  var listkey = 'oflen'
-  }
-  if (h >= 16 || h < 17) { 
-  var listkey = 'rxking'
-  }
+var listkey = ['vinko', 'rxking']
 
 router.post("/apikey", async (req, res, next) => {
   const key = req.query.key;
