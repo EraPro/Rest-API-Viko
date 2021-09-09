@@ -1,96 +1,127 @@
-<!DOCTYPE html>
-<html>
-
+<!doctype html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
-  <title>VikoAPI</title>
-  <link href="https://studiovdk.herokuapp.com/main-menu/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-  <link href="https://studiovdk.herokuapp.com/main-menu/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-  <link href="https://studiovdk.herokuapp.com/main-menu/css/ruang-admin.min.css" rel="stylesheet">
-  <script data-ad-client="ca-pub-5274370025994358" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-  <style>
-    a {
-      display: block;
-      width: 200px;
-      height: 40px;
-      line-height: 40px;
-      font-size: 18px;
-      font-family: sans-serif;
-      text-decoration: none;
-      color: #34bdeb;
-      border: 2px solid #05a3f7;
-      letter-spacing: 2px;
-      text-align: center;
-      position: relative;
-      transition: all .35s;
-    }
+	<meta charset="utf-8" />
+	<link rel="apple-touch-icon" sizes="76x76" href="../src/assets/img/apple-icon.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="../src/assets/img/favicon.png">
+  <script src="https://cdn.lordicon.com/libs/mssddfmo/lord-icon-2.1.0.js"></script>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
-    a span {
-      position: relative;
-      z-index: 2;
-    }
+	<title>VikoAPI</title>
 
-    a:after {
-      position: absolute;
-      content: "";
-      top: 0;
-      left: 0;
-      width: 0;
-      height: 100%;
-      background: #05a3f7;
-      transition: all .35s;
-    }
+	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta name="viewport" content="width=device-width" />
 
-    a:hover {
-      color: #fff;
-    }
+    <link href="./css/bootstrap.min.css" rel="stylesheet" />
+    <link href="./css/paper-dashboard.css" rel="stylesheet"/>
+    <link href="./css/demo.css" rel="stylesheet" />
+    <link href="./css/documentation.css" rel="stylesheet" />
 
-    a:hover:after {
-      width: 100%;
-    }
-  </style>
+    <!--  Font dan ikon     -->
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Muli:400,300' rel='stylesheet' type='text/css'>
+
 </head>
 
-<body class="bg-gradient-login" style="	background-image: url(https://pingendo.com/site-assets/cover.jpg);	background-position: top left;	background-size: 100%;	background-repeat: repeat;">
-  <!-- Login Content -->
-  <div class="container-login">
-    <div class="row justify-content-center">
-      <div class="col-xl-12 col-lg-12 col-md-9">
-        <div class="card shadow-sm my-5">
-          <div class="card-body p-0">
-            <div class="row">
-              <div class="col-lg-13">
-                <div class="login-form">
-                  <div class="text-center">
-                    <script src="https://cdn.lordicon.com/libs/mssddfmo/lord-icon-2.1.0.js"></script>
-                    <lord-icon src="https://cdn.lordicon.com/xxtkutpo.json" trigger="loop" colors="primary:black,secondary:black" style="width:200px;height:200px">
-                    </lord-icon>
-                  </div>
-                  <center><h5 style=""><strong>REST API VIKO FREE</strong></h5></center>
-                  <center><p class="text-xs font-weight-bold text-uppercase mb-4">APIKEY FREE<br><br>Silahkan anda memilih rest api kami tanpa limit, jika ada bug atau error chat owner, ownernya baik jdi silahkan chat aja</p></center><br>
-                  <center><a href="https://viko-api.herokuapp.com/docs"><span>API MENU</span></a></center><br>
-                  <center>
-                    <p>V i k o d e v</p>
-                  </center>
-                </div>
-              </div>
-            </div>
-          </div>
+<body class="offline-doc">
+  <!-- mainbar -->
+  <nav class="navbar navbar-expand-lg navbar-absolute fixed-top navbar-transparent">
+    <div class="container">
+      <div class="navbar-wrapper">
+        <div class="navbar-minimize">
+          <button id="minimizeSidebar" class="btn btn-icon btn-round">
+            <i class="nc-icon nc-minimal-right text-center visible-on-sidebar-mini"></i>
+            <i class="nc-icon nc-minimal-left text-center visible-on-sidebar-regular"></i>
+          </button>
+        </div>
+        <div class="navbar-toggle">
+          <button type="button" class="navbar-toggler">
+            <span class="navbar-toggler-bar bar1"></span>
+            <span class="navbar-toggler-bar bar2"></span>
+            <span class="navbar-toggler-bar bar3"></span>
+          </button>
+        </div>
+        <lord-icon
+    src="https://cdn.lordicon.com/xxtkutpo.json"
+    trigger="loop"
+    colors="primary:#ffffff,secondary:#d1faf0"
+    stroke="60"
+    style="width:60px;height:60px">
+</lord-icon>
+        <a class="navbar-brand" href="#pablo"><strong>VIKO</strong> - API</a>
+      </div>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-bar navbar-kebab"></span>
+        <span class="navbar-toggler-bar navbar-kebab"></span>
+        <span class="navbar-toggler-bar navbar-kebab"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navigation">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="https://github.com/vikodk67/Rest-API/issues" target="_blank">
+              Have an issue?
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- End Navbar -->
+  <div class="page-header clear-filter">
+    <div class="page-header-image" style="background-image: url('https://cdn.dribbble.com/users/1496969/screenshots/5403850/download_20181016_175021.gif');"></div>
+    <div class="container text-center">
+      <div class="col-md-8 ml-auto mr-auto">
+        <div class="brand">
+          <h1 class="title">
+            FREE REST API PUBLIC BY VIKO
+          </h1>
+          <h4 id="visits">Visit</h4>
+          <br/>
+          <a href="./docs" style="background-image: url('http://daddisonish.com/wp-content/uploads/bluegradientsmall1.gif');" class="btn btn-primary btn-round btn-lg">View documentation</a>
         </div>
       </div>
     </div>
   </div>
-  
-  <!-- Login Content -->
-  <script src="https://studiovdk.herokuapp.com/main-menu/vendor/jquery/jquery.min.js"></script>
-  <script src="https://studiovdk.herokuapp.com/main-menu/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="https://studiovdk.herokuapp.com/main-menu/vendor/jquery-easing/jquery.easing.min.js"></script>
-  <script src="https://studiovdk.herokuapp.com/main-menu/js/ruang-admin.min.js"></script>
-  <pingendo onclick="window.open('https://pingendo.com/', '_blank')" style="cursor:pointer;position: fixed;bottom: 20px;right:20px;padding:4px;background-color: #00b0eb;border-radius: 8px; width:220px;display:flex;flex-direction:row;align-items:center;justify-content:center;font-size:14px;color:white">Made with Pingendo&nbsp;&nbsp;<img src="https://pingendo.com/site-assets/Pingendo_logo_big.png" class="d-block" alt="Pingendo logo" height="16"></pingendo>
+  <footer class="footer footer-black  footer-white ">
+    <div class="container-fluid">
+      <div class="row">
+        <nav class="footer-nav">
+          <ul>
+            <li>
+              <a href="https://www.instagram.com/vikodwik_rmx/" target="_blank">Instagram</a>
+            </li>
+            <li>
+              <a href="#" target="_blank">Blog</a>
+            </li>
+            <li>
+              <a href="https://www.creative-tim.com/license" target="_blank">Facebook</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="credits ml-auto">
+          <span class="copyright">
+            ©
+            <script>
+              document.write(new Date().getFullYear())
+            </script>, made with <i class="fa fa-heart heart"></i> by StudioVDK
+          </span>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!--   CODE GUA CUK   -->
+  <script async="" src="https://api.countapi.xyz/hit/studiovdk.herokuapp.com/visits?callback=cb"></script>
+  <script>
+function cb(response) {
+    document.getElementById('visits').innerText = `Visitor: ${response.value}`
+}
+</script>
+  <script src="./js/jquery-3.1.1.min.js"></script>
+  <script src="./js/bootstrap.min.js"></script>
+  <script src="http://studiovdk.herokuapp.com/vendor/jquery/jquery.min.js"></script>
+  <script src="http://studiovdk.herokuapp.com/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="http://studiovdk.herokuapp.com/vendor/jquery-easing/jquery.easing.min.js"></script>
+  <script src="http://studiovdk.herokuapp.com/js/ruang-admin.js"></script>
+  <script src="http://studiovdk.herokuapp.com/vendor/chart.js/Chart.min.js"></script>
 </body>
-
 </html>
