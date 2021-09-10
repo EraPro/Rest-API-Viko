@@ -752,14 +752,14 @@ router.get('/stalk/npm', async (req, res, next) => {
 res.sendFile(__path + '/views/apikey-not-found.html');
 }
 })
-////New by itskhyaa
+////New by itskhyaa & viko
 router.get('/cerpen/random', async (req, res, next) => {
         var Apikey = req.query.apikey
             
 	if(!Apikey) return res.json(loghandler.notparam)
 	if(listkey.includes(Apikey)){
 
-       fetch(encodeURI(`https://privatasw.herokuapp.com/cerita/random`))
+       fetch(encodeURI(`http://viko-cerpenmu.herokuapp.com/`))
         .then(response => response.json())
         .then(data => {
         var result = data;
