@@ -12,6 +12,10 @@ router.get('/', (req, res) => {
 router.get('/about', (req, res) => {
     res.sendFile(__path + '/views/about.html')
 })
+})
+router.get('/googlefe81226529bfcd5a', (req, res) => {
+    res.sendFile(__path + '/views/googlefe81226529bfcd5a.html')
+})
 router.get('index.html', (req, res) => {
     res.sendFile(__path + '/views/index.html')
 })
