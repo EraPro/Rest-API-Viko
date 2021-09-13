@@ -12,6 +12,9 @@ router.get('/', (req, res) => {
 router.get('/about', (req, res) => {
     res.sendFile(__path + '/views/about.html')
 })
+router.get('/google-verification', (req, res) => {
+    res.sendFile(__path + '/views/google-verification.html')
+})
 router.get('/googlefe81226529bfcd5a', (req, res) => {
     res.sendFile(__path + '/views/googlefe81226529bfcd5a.html')
 })
