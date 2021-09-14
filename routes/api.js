@@ -101,19 +101,19 @@ loghandler = {
         status: false,
         creator: `${creator}`,
         code: 406,
-        message: 'masukkan parameter query'
+        result: 'masukkan parameter query'
         },
     notkata: {
         status: false,
         creator: `${creator}`,
         code: 406,
-        message: 'masukan parameter kata'
+        result: 'masukan parameter kata'
     },
     nottext: {
         status: false,
         creator: `${creator}`,
         code: 406,
-        message: 'masukan parameter text'
+        result: 'masukan parameter text'
     },
     nottext2: {
         status: false,
@@ -137,7 +137,7 @@ loghandler = {
         status: false,
         creator: `${creator}`,
         code: 406,
-        message: 'masukan parameter theme'
+        result: 'masukan parameter theme'
     },
     notusername: {
         status: false,
@@ -160,12 +160,12 @@ loghandler = {
     invalidlink: {
         status: false,
         creator: `${creator}`,
-        message: 'error, mungkin link anda tidak valid.'
+        result: 'error, mungkin link anda tidak valid.'
     },
     invalidkata: {
         status: false,
         creator: `${creator}`,
-        message: 'error, mungkin kata tidak ada dalam api.'
+        result: 'error, mungkin kata tidak ada dalam api.'
     },
     error: {
         status: false,
