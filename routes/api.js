@@ -423,7 +423,7 @@ router.get('/f/simi', async(req, res, next) => {
   if(!query) return res.json(loghandler.notquery)
   
   if(listkey.includes(apikey)){
-  fetch(encodeURI(`https://simsumi.herokuapp.com/api?text=group%20mengatakan%20${query}&lang=id`))
+  fetch(encodeURI(`https://simsumi.herokuapp.com/api?text=${query}&lang=id`))
   .then(response => response.json())
         .then(hasil => {
 
