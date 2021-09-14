@@ -3073,21 +3073,29 @@ router.get('/asupan', async (req, res, next) => {
 });
  
 router.get("/maker/nulis", async (req, res, next) => {
-  
-  apikey = req.query.apikey;
-  text = req.query.text;
-  
-  if(!text) return res.json(loghandler.nottext)
+  const apikey = req.query.apikey;
+  const query = req.query.query;
   if(!apikey) return res.json(loghandler.notparam)
+  if(!query) return res.json(loghandler.notquery)
   
-  if(listkey.includes(apikey)) {
-    let hasil = 'https://api.zeks.xyz/api/nulis?text='+ text +'&apikey=pikodeka67' 
-    data = await fetch(hasil).then(v => v.buffer())
-    await fs.writeFileSync(__path +'/tmp/nulis.jpeg', data)
-    res.sendFile(__path +'/tmp/nulis.jpeg')
-  } else {
-    res.json(loghandler.invalidKey)
-  }
+  if(listkey.includes(apikey)){
+  fetch(encodeURI(`https://itskhyaa-textmaker.herokuapp.com/api/nulis?text=${query}`))
+  .then(response => response.json())
+        .then(hasil => {
+
+        var result = hasil.result;
+             res.json({
+                 status : true,
+                 creator : `${creator}`,
+                 result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+} else {
+  res.json(loghandler.invalidKey)
+}
 })
 
 router.get("/maker/pubeje", async (req, res, next) => {
