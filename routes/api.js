@@ -1578,7 +1578,7 @@ router.get('/search/image', async(req, res, next) => {
   if(listkey.includes(apikey)){
     try {
         var options = {
-            url: `http://results.dogpile.com/serp?qc=images&q=${query}`,
+            url: `https://www.google.com/search?q=&q=${query}`,
             method: "GET",
             headers: {
                 "Accept": "text/html",
