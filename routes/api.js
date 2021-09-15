@@ -3152,6 +3152,27 @@ router.get("/maker/silver-button", async (req, res, next) => {
   }
 })
 
+router.get("/intro/welcome", async (req, res, next) => {
+  
+  apikey = req.query.apikey;
+
+  avatar = req.query.text;
+  gcnname = req.query.text2;
+  member = req.query.text3;
+  namamember = req.query.text4;
+  if(!text) return res.json(loghandler.nottext)
+  if(!apikey) return res.json(loghandler.notparam)
+  
+  if(listkey.includes(apikey)) {
+    let hasil = `https://pecundang.herokuapp.com/api/canvaswelbg?name=${namamember}&avatar=${avatar}&background=https://wallpaperaccess.com/full/1155011.jpg&gcname=${gcname}&jumlahmem=${member}`
+    data = await fetch(hasil).then(v => v.buffer())
+    await fs.writeFileSync(__path +'/tmp/wel.jpeg', data)
+    res.sendFile(__path +'/tmp/wel.jpeg')
+  } else {
+    res.sendFile(__path + '/views/apikey-not-found.html');
+  }
+})
+
 router.get('/maker/ttp', async(req, res, next) => {
 
   const text = req.query.text;
