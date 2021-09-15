@@ -3157,7 +3157,7 @@ router.get("/intro/welcome", async (req, res, next) => {
   apikey = req.query.apikey;
 
   avatar = req.query.text;
-  gcnname = req.query.text2;
+  gcname = req.query.text2;
   member = req.query.text3;
   namamember = req.query.text4;
   if(!text) return res.json(loghandler.nottext)
