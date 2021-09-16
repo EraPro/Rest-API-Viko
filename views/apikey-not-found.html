@@ -1,122 +1,109 @@
-<!DOCTYPE html>
-<html lang="en">
-
+<html>
+<h1>404</h1>
 <head>
-
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
-  <link href="img/logo/logo.png" rel="icon">
-  <title>APIKEY NOT FOUND</title>
-  <link href="https://studiovdk.herokuapp.com/main-menu/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-  <link href="https://studiovdk.herokuapp.com/main-menu/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-  <link href="http://studiovdk.herokuapp.com/main-menu/css/ruang-admin.min.css" rel="stylesheet">
-
+<title>404 NOT FOUND APIKEY</title>
 </head>
+<body>
+	<style>
+	@import url("https://fonts.googleapis.com/css?family=Share+Tech+Mono|Montserrat:700");
 
-<body class="bg-gradient-login">
-  <!-- Login Content -->
-  <div class="container-login">
-    <div class="row justify-content-center">
-      <div class="col-xl-10 col-lg-12 col-md-9">
-        <div class="card shadow-sm my-5">
-          <div class="card-body p-0">
-            <div class="row">
-              <div class="col-lg-12">
-                <div class="login-form">
-                  <div class="text-center">
-<script src="https://cdn.lordicon.com/libs/mssddfmo/lord-icon-2.1.0.js"></script>
-<lord-icon
-    src="https://cdn.lordicon.com/msoeawqm.json"
-    trigger="loop"
-    colors="primary:#121331,secondary:#08a88a"
-    style="width:200px;height:200px">
-</lord-icon>
-                  </div>
-                  <center><h5><strong>APIKEY TIDAK DITEMUKAN</strong></h5></center><br>
-                  <style>
-
-a{
-  display: block;
-  width: 200px;
-  height: 40px;
-  line-height: 40px;
-  font-size: 18px;
-  font-family: sans-serif;
-  text-decoration: none;
-  color: #34bdeb;
-  border: 2px solid #05a3f7;
-  letter-spacing: 2px;
-  text-align: center;
-  position: relative;
-  transition: all .35s;
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    box-sizing: border-box;
+    color: inherit;
 }
 
-a span{
-  position: relative;
-  z-index: 2;
+body {
+    background-image: linear-gradient(120deg, #42baff 0%, #19abff 100%);
+    height: 100vh;
 }
 
-a:after{
-  position: absolute;
-  content: "";
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 100%;
-  background: #05a3f7;
-  transition: all .35s;
+h1 {
+    font-size: 45vw;
+    text-align: center;
+    position: fixed;
+    width: 100vw;
+    z-index: 1;
+    color: #ffffff26;
+    text-shadow: 0 0 50px rgba(0, 0, 0, 0.07);
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: "Montserrat", monospace;
 }
 
-a:hover{
-  color: #fff;
+div {
+    background: rgba(0, 0, 0, 0);
+    width: 70vw;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0 auto;
+    padding: 30px 30px 10px;
+    box-shadow: 0 0 150px -20px rgba(0, 0, 0, 0.5);
+    z-index: 3;
 }
 
-a:hover:after{
-  width: 100%;
-}
-                  </style>
-                  <center><div class="wrapper">
-  <a href="http://viko-api.herokuapp.com/docs"><span>HOME</span></a>
-</div></center><br>
-<style>
-.container {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+P {
+    font-family: "Share Tech Mono", monospace;
+    color: #ffff;
+    margin: 0 0 20px;
+    font-size: 17px;
+    line-height: 1.2;
 }
 
-/* Then style the iframe to fit in the container div with full height and width */
-.responsive-iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  width: 100%;
-  height: 60%;
+span {
+    color: #ffff;
 }
-</style>
-                  <div class="container">
-                  <iframe class="responsive-iframe" src="https://studiovdk.herokuapp.com/api/apikey404.php"></iframe>
-                  </div>
-<center><p>V I K O D E V</p></center>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Login Content -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-  <script src="js/ruang-admin.min.js"></script>
+
+i {
+    color: #ffff;
+}
+
+div a {
+    text-decoration: none;
+}
+
+b {
+    color: #81a2be;
+}
+
+a.avatar {
+    position: fixed;
+    bottom: 15px;
+    right: -100px;
+    animation: slide 0.5s 4.5s forwards;
+    display: block;
+    z-index: 4
+}
+
+a.avatar img {
+    border-radius: 100%;
+    width: 44px;
+    border: 2px solid white;
+}
+
+@keyframes slide {
+    from {
+        right: -100px;
+        transform: rotate(360deg);
+        opacity: 0;
+    }
+    to {
+        right: 15px;
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+}
+
+	</style>
+<div><p>> <span>ERROR CODE</span>: "<i>Apikey 404 tidak ditemukan</i>"</p>
+<p>> <span>ERROR DESCRIPTION</span>: "<i>silahkan kembali ke halaman utama untuk melihat apikeynya</i>"</p>
+<p>> <span>GO TO HOME</span>: [<a href="/docs">Home Page</a>]</p>
+</div>
 </body>
-
 </html>
