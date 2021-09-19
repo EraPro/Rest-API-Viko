@@ -54,10 +54,9 @@
   <div id="wrapper">
     <!-- Sidebar -->
     <ul class="navbar-nav sidebar sidebar-light accordion" id="accordionSidebar" style="">
-      <a class="sidebar-brand d-flex align-items-center justify-content-center bg-info" href="http://studiovdk.herokuapp.com/">
+      <a class="sidebar-brand d-flex align-items-center justify-content-center bg-info" href="#">
         <div class="sidebar-brand-icon">
-          <lord-icon src="https://cdn.lordicon.com/xxtkutpo.json" trigger="loop" colors="primary:#ffffff,secondary:#66eece" style="width:80px;height:80px">
-          </lord-icon>
+          <span class="fas fa-fire"></span>
         </div>
         <div class="sidebar-brand-text mx-3">VIKO-API</div><br>
       </a>
@@ -320,27 +319,54 @@
       </li>
       <hr class="sidebar-divider">
       <div class="sidebar-heading">
-        <div class="version"><b>Other list</b></div>
+        <div class="version"><b>Sosial Media</b></div>
       </div>
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="https://saweria.co/viko">
-          <i class="fa fa-shopping-cart"></i>
-          <span>Donate</span>
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="https://vikoapi-index.herokuapp.com/">
-          <i class="fas fa-fw fa-code"></i>
-          <span>Viko API V2</span>
-        </a>
-      </li>
       <li class="nav-item">
         <a class="nav-link collapsed" href="https://www.instagram.com/vikodwik_rmx/">
           <i class="fab fa-fw fa-instagram"></i>
           <span>Instagram</span>
         </a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="https://www.youtube.com/channel/UCXWQsUJosWcMEsiT-SqIrSw/videos">
+          <i class="fab fa-fw fa-youtube"></i>
+          <span>Youtube</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="https://www.facebook.com/viko.dwi.92">
+          <i class="fab fa-fw fa-facebook"></i>
+          <span>Facebook</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="https://www.facebook.com/viko.dwi.92">
+          <i class="fab fa-fw fa-github"></i>
+          <span>Github</span>
+        </a>
+      </li>
       <hr class="sidebar-divider">
+      <li class="nav-item">
+        <div class="sidebar-heading">
+        <div class="version"><b>Lainnya</b></div>
+      </div>
+        <a class="nav-link collapsed" href="https://vikoapi-index.herokuapp.com/">
+          <i class="fas fa-fw fa-fire"></i>
+          <span>Vikoapi V2</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="https://saweria.co/viko">
+          <i class="fas fa-fw fa-donate"></i>
+          <span> Donate</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="https://wa.wizard.id/0fbd56">
+          <i class="fas fa-fw fa-robot"></i>
+          <span> Miccanss Bot</span>
+        </a>
+      </li>
     </ul>
     <!-- Sidebar -->
     <div id="content-wrapper" class="d-flex flex-column">
@@ -455,6 +481,18 @@
         <!-- Topbar -->
         <!-- Container Fluid-->
         <div class="container-fluid" id="container-wrapper">
+          <div class="col-xl-10 col-md-6 mb-4">
+              <div class="card h-100" style=" background-image: url(https://64.media.tumblr.com/2b713b06c28544c86b056488e6da3ed1/tumblr_inline_p7l30wzF9K1v1qfwi_540.gifv);  background-position: top left;  background-size: 100%;  background-repeat: repeat;">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <script type="text/javascript" src="https://uprimp.com/bnr.php?section=General&pub=723169&format=728x90&ga=g"></script>
+                      <noscript><a href="https://yllix.com/publishers/723169" target="_blank"><img src="//ylx-aff.advertica-cdn.com/pub/728x90.png" style="border:none;margin:0;padding:0;vertical-align:baseline;" alt="ylliX - Online Advertising Network" /></a></noscript>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
           <div class="d-sm-flex align-items-center justify-content-between mb-4">
             <h1 class="h3 mb-0 text-gray-100">API MENU</h1>
             <ol class="breadcrumb">
@@ -560,7 +598,7 @@
                   <div class="row align-items-center">
                     <div class="col mr-2">
                       <div class="text-xs font-weight-bold text-uppercase mb-1">Waktu</div>
-                      <div class="h6 mb-0 font-weight-bold text-gray-800" id="jam">
+                      <div class="h4 mb-0 font-weight-bold text-gray-800" id="jam">
                         <div class="spinner-border spinner-border-sm" role="status">
                           <span class="sr-only">
                             <div class="spinner-border spinner-border-sm" role="status">
@@ -590,8 +628,9 @@
                   <div class="card-body">
                     <div class="row align-items-center">
                       <div class="col mr-2">
+                        <i class="fas fa-fw fa-key"></i>
                         <div class="h6 mb-0 font-weight-bold text-dark-800 text-uppercase">
-                          <h6 class="text-center">CEK APIKEY</h6>
+                          <div class="text-xs font-weight-bold text-uppercase mb-1">CEK APIKEY</div>
                         </div>
                         <input type="password" class="form-control" placeholder="Check Your apikey" name="apikey" required=""><br>
                         <button class="btn btn-danger btn-icon-split">
@@ -643,21 +682,6 @@
                 </div>
               </div>
             </div>
-            <div class="col-xl-4 col-md-6 mb-4">
-              <div class="card h-100" style=" background-image: url(https://64.media.tumblr.com/2b713b06c28544c86b056488e6da3ed1/tumblr_inline_p7l30wzF9K1v1qfwi_540.gifv);  background-position: top left;  background-size: 100%;  background-repeat: repeat;">
-                <div class="card-body">
-                  <div class="row no-gutters align-items-center">
-                    <div class="col mr-2">
-                      <div class="text-xs font-weight-bold text-uppercase mb-1">INFORMASI</div>
-                      <strong>! PERINGATAN !</strong>
-                      <div class="mt-2 mb-0 text-muted text-xs">
-                        <span>rest api ini gratis dan jika ada yang error langsung chat pojok kanan bawah, jika pengguna memanfaatkan rest-api untuk hal negatif bukan tanggung jawab saya:V.<br><strong>11/09/2021</strong>
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
             </div>
             <style>
 :root {
@@ -1698,7 +1722,7 @@ body {
                         <td>GET</td>
                         <td style="color:blue;">ONLINE</td>
                         <td>
-                          <a class="btn" href="/api/random/artinama?apikey=rxking&amp;query=viko%20dwi%20kurniawan">URL</a>
+                          <a class="btn" href="/api/random/artinama?apikey=APIKEY&amp;query=viko%20dwi%20kurniawan">URL</a>
                         </td>
                       </tr>
                     </tbody>
@@ -1708,6 +1732,21 @@ body {
             </div>
             <!---Container Fluid-->
           </div>
+          <div class="container-fluid" id="container-wrapper">
+          <div class="col-xl-12 col-md-6 mb-4">
+              <div class="card h-100" style=" background-image: url(https://64.media.tumblr.com/2b713b06c28544c86b056488e6da3ed1/tumblr_inline_p7l30wzF9K1v1qfwi_540.gifv);  background-position: top left;  background-size: 100%;  background-repeat: repeat;">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <center>
+                      <script type="text/javascript" src="https://uprimp.com/bnr.php?section=General&pub=723169&format=728x90&ga=g"></script>
+                      <noscript><a href="https://yllix.com/publishers/723169" target="_blank"><img src="//ylx-aff.advertica-cdn.com/pub/728x90.png" style="border:none;margin:0;padding:0;vertical-align:baseline;" alt="ylliX - Online Advertising Network" /></a></noscript>
+                    </center>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
           <!-- Footer -->
           <footer class="sticky-footer bg-white">
             <div class="container my-auto">
@@ -1733,6 +1772,7 @@ body {
       <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
       <script src="vendor/datatables/jquery.dataTables.min.js"></script>
       <script src="https://viko-api.herokuapp.com/js/ruang-admin.js"></script>
+      <script id='pixel-script-poptin' src='https://cdn.popt.in/pixel.js?id=7ae7e40116347' async='true'></script> 
       <script type="text/javascript">
         window.$crisp = [];
         window.CRISP_WEBSITE_ID = "1c7170fa-cbdb-498a-ba0d-9e6b1ea52df9";
@@ -1764,5 +1804,4 @@ body {
     </div>
   </div>
 </body>
-
 </html>
