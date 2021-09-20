@@ -64,7 +64,17 @@
       <li class="nav-item active">
         <a class="nav-link" href="./">
           <i class="fas fa-fw fa-code"></i>
-          <span>Index</span></a>
+          <span>Index</span></a><br>
+      </li>
+      <hr class="sidebar-divider my-0">
+      <li class="nav-item active">
+        <a class="nav-link" href="./search">
+          <i class="fas fa-fw fa-search"></i>
+          <span>Search</span></a>
+      <li class="nav-item active">
+        <a class="nav-link" href="#">
+          <i class="fas fa-fw fa-book"></i>
+          <span>Example</span></a>
       </li>
       <hr class="sidebar-divider">
       <div class="sidebar-heading"> List API </div>
@@ -481,13 +491,15 @@
         <!-- Topbar -->
         <!-- Container Fluid-->
         <div class="container-fluid" id="container-wrapper">
-          <div class="col-xl-10 col-md-6 mb-4">
-              <div class="card h-100" style=" background-image: url(https://64.media.tumblr.com/2b713b06c28544c86b056488e6da3ed1/tumblr_inline_p7l30wzF9K1v1qfwi_540.gifv);  background-position: top left;  background-size: 100%;  background-repeat: repeat;">
+          <div class="col-xl-11 col-md-6 mb-4">
+              <div class="card h-100">
                 <div class="card-body">
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
+                      <center>
                       <script type="text/javascript" src="https://uprimp.com/bnr.php?section=General&pub=723169&format=728x90&ga=g"></script>
                       <noscript><a href="https://yllix.com/publishers/723169" target="_blank"><img src="//ylx-aff.advertica-cdn.com/pub/728x90.png" style="border:none;margin:0;padding:0;vertical-align:baseline;" alt="ylliX - Online Advertising Network" /></a></noscript>
+                      </center>
                       </div>
                     </div>
                   </div>
@@ -496,8 +508,8 @@
           <div class="d-sm-flex align-items-center justify-content-between mb-4">
             <h1 class="h3 mb-0 text-gray-100">API MENU</h1>
             <ol class="breadcrumb">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active" aria-current="page">Dasboard</li>
+              <li style="color: white;" class="breadcrumb-item"><a href="./">Home</a></li>
+              <li class="breadcrumb-item active" style="color: white;" aria-current="page">Dasboard</li>
             </ol>
           </div>
           <div class="row mb-3">
@@ -549,7 +561,7 @@
               </div>
             </div>
             <!-- Earnings (Annual) Card Example -->
-            <div class="col-xl-4 col-md-6 mb-4">
+            <div class="col-xl-5 col-md-6 mb-4">
               <div class="card h-100">
                 <div class="card-body">
                   <div class="row no-gutters align-items-center">
@@ -573,7 +585,7 @@
               </div>
             </div>
             <!-- New User Card Example -->
-            <div class="col-xl-5 col-md-6 mb-4">
+            <div class="col-xl-6 col-md-6 mb-4">
               <script> window.onload = function() { jam(); }
 
  function jam() {
@@ -662,28 +674,7 @@
   text-decoration: none;
 }
 </style>
-            <div class="col-xl-6 col-md-6 mb-4">
-              <div class="card h-100">
-                <div class="card-body">
-                  <div class="row no-gutters align-items-center">
-                    <div class="col mr-2">
-                      <div class="text-xs font-weight-bold text-uppercase mb-1">EXAMPLE USAGE</div>
-                      <br>
-                      <a href="https://viko-api.glitch.me/NodeJS.html" class="btn btn-danger btn-icon-split"> JS </a>
-                      <a href="https://viko-api.glitch.me/php.html" class="btn btn-danger btn-icon-split"> PHP </a>
-                      <a href="https://viko-api.glitch.me/python.html" class="btn btn-danger btn-icon-split"> Python </a>
-                      <a href="https://viko-api.glitch.me/C++.html" class="btn btn-danger btn-icon-split"> C++<p></p>
-                      </a>
-                      <div class="mt-2 mb-0 text-muted text-xs">
-                        <span><strong>Note:</strong> Pilih salah satu untuk melihat EXAMPLE</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            </div>
-            <style>
+<style>
 :root {
   --surface-color: #fff;
   --curve: 20;
@@ -804,951 +795,43 @@ body {
   overflow: hidden;
 }    
 </style>
-            <!-- Datatables -->
-            <div class="col-lg-12">
-              <div class="card mb-4">
-                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                  <h6 class="m-0 font-weight-bold text-primary">DOCS API SEARCH</h6>
-                </div>
-                <div class="table-responsive p-3">
-                  <table class="table align-items-center table-flush" id="dataTable">
-                    <thead class="thead-light">
-                      <tr>
-                        <th>Name</th>
-                        <th>Method</th>
-                        <th>Status</th>
-                        <th>Try</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>Facebook download</td>
-                        <td>GET</td>
-                        <td style="color:red;">ERROR</td>
-                        <td>
-                          <a class="btn" href="/api/download/fb?url=https://www.facebook.com/alanwalkermusic/videos/277641643524720&amp;apikey=APIKEY">URL</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Tiktok download</td>
-                        <td>GET</td>
-                        <td style="color:blue;">ONLINE</td>
-                        <td>
-                          <a class="btn" href="/api/download/tiktok?url=https://vt.tiktok.com/ZSJhvu1AE/&amp;apikey=APIKEY">URL</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Instagram download</td>
-                        <td>GET</td>
-                        <td style="color:blue;">ONLINE</td>
-                        <td>
-                          <a class="btn" href="/api/download/ig?url=https://www.instagram.com/p/CNtpwxuH5NK/?igshid=g26k5coikzwr&amp;apikey=APIKEY">URL</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Youtube Mp3 Download</td>
-                        <td>GET</td>
-                        <td style="color:blue;">ONLINE</td>
-                        <td>
-                          <a class="btn" href="/api/download/ytmp3?url=https://youtu.be/Nq5rzeJ5Ab4&amp;apikey=APIKEY">URL</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Youtube Mp4 Download</td>
-                        <td>GET</td>
-                        <td style="color:blue;">ONLINE</td>
-                        <td>
-                          <a class="btn" href="/api/download/ytmp4?url=https://youtu.be/Nq5rzeJ5Ab4&amp;apikey=APIKEY">URL</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Youtube Play Mp3</td>
-                        <td>GET</td>
-                        <td style="color:blue;">ONLINE</td>
-                        <td>
-                          <a class="btn" href="/api/yt/playmp3?query=Dj-pota-pota&amp;apikey=APIKEY">URL</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Youtube Play Mp4</td>
-                        <td>GET</td>
-                        <td style="color:blue;">ONLINE</td>
-                        <td>
-                          <a class="btn" href="/api/yt/playmp4?query=jedug%20jedug%2030detik&amp;apikey=APIKEY">URL</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Youtube searching</td>
-                        <td>GET</td>
-                        <td style="color:blue;">ONLINE</td>
-                        <td>
-                          <a class="btn" href="/api/yt/search?query=atta-halilintar&amp;apikey=APIKEY">URL</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Instagram stalker</td>
-                        <td>GET</td>
-                        <td style="color:blue;">ONLINE</td>
-                        <td>
-                          <a class="btn" href="/api/stalk/ig?apikey=APIKEY&amp;query=vikodwik_rmx">URL</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Tiktok stalker</td>
-                        <td>GET</td>
-                        <td style="color:blue;">ONLINE</td>
-                        <td>
-                          <a class="btn" href="/api/stalk/tiktok?apikey=rxking&amp;username=chikakiku">URL</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Info NPM</td>
-                        <td>GET</td>
-                        <td style="color:blue;">ONLINE</td>
-                        <td>
-                          <a class="btn" href="/api/stalk/npm?apikey=APIKEY&amp;query=zahir-api&amp;hostname=zhirr">URL</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>JOOX Search</td>
-                        <td>GET</td>
-                        <td style="color:blue;">ONLINE</td>
-                        <td>
-                          <a class="btn" href="/api/music/joox?apikey=APIKEY&amp;query=Denny caknan">URL</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Search Lirik Lagu (international)</td>
-                        <td>GET</td>
-                        <td style="color:blue;">ONLINE</td>
-                        <td>
-                          <a class="btn" href="/api/music/liriklagu?apikey=APIKEY&amp;query=Denny caknan">URL</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Search Chord Lagu (Kelas atas)</td>
-                        <td>GET</td>
-                        <td style="color:blue;">ONLINE</td>
-                        <td>
-                          <a class="btn" href="/api/music/chordlagu?lagu=sayang&amp;apikey=APIKEY">URL</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Hadits Shahih</td>
-                        <td>GET</td>
-                        <td style="color:blue;">ONLINE</td>
-                        <td>
-                          <a class="btn" href="/api/muslim/hadits?kitab=bukhari&amp;nomor=52&amp;apikey=APIKEY">URL</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Al Qur'an</td>
-                        <td>GET</td>
-                        <td style="color:blue;">ONLINE</td>
-                        <td>
-                          <a class="btn" href="/api/muslim/quran?surah=1&amp;ayat=2&amp;apikey=APIKEY">URL</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Doa Tahlil</td>
-                        <td>GET</td>
-                        <td style="color:blue;">ONLINE</td>
-                        <td>
-                          <a class="btn" href="/api/muslim/tahlil?apikey=APIKEY">URL</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Doa Wirid</td>
-                        <td>GET</td>
-                        <td style="color:blue;">ONLINE</td>
-                        <td>
-                          <a class="btn" href="/api/muslim/wirid?apikey=APIKEY">URL</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Asmaul Husna</td>
-                        <td>GET</td>
-                        <td style="color:blue;">ONLINE</td>
-                        <td>
-                          <a class="btn" href="/api/muslim/asmaulhusna?apikey=APIKEY">URL</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Doa Harian</td>
-                        <td>GET</td>
-                        <td style="color:blue;">ONLINE</td>
-                        <td>
-                          <a class="btn" href="/api/muslim/doaharian?apikey=APIKEY">URL</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Ayat Kursi</td>
-                        <td>GET</td>
-                        <td style="color:blue;">ONLINE</td>
-                        <td>
-                          <a class="btn" href="/api/muslim/ayatkursi?apikey=APIKEY">URL</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Kisah Nabi</td>
-                        <td>GET</td>
-                        <td style="color:blue;">ONLINE</td>
-                        <td>
-                          <a class="btn" href="/api/muslim/kisahnabi?nabi=muhammad&amp;apikey=APIKEY">URL</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Niat Shalat</td>
-                        <td>GET</td>
-                        <td style="color:blue;">ONLINE</td>
-                        <td>
-                          <a class="btn" href="/api/muslim/niatshalat?apikey=APIKEY">URL</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Bacaan Shalat</td>
-                        <td>GET</td>
-                        <td style="color:blue;">ONLINE</td>
-                        <td>
-                          <a class="btn" href="/api/muslim/bacaanshalat?apikey=APIKEY">URL</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Jadwal Shalat</td>
-                        <td>GET</td>
-                        <td style="color:blue;">ONLINE</td>
-                        <td>
-                          <a class="btn" href="/api/muslim/jadwalshalat?kota=jakartautara&amp;apikey=APIKEY">URL</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Pinterest</td>
-                        <td>GET</td>
-                        <td style="color:blue;">ONLINE</td>
-                        <td>
-                          <a class="btn" href="/api/pinterest?query=loli&amp;apikey=APIKEY">URL</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Search Image</td>
-                        <td>GET</td>
-                        <td style="color:red;">ERROR</td>
-                        <td>
-                          <a class="btn" href="api/search/image?apikey=APIKEY&amp;query=pegunungan">URL</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>PP Couple</td>
-                        <td>GET</td>
-                        <td style="color:blue;">ONLINE</td>
-                        <td>
-                          <a class="btn" href="api/random/couple?apikey=APIKEY">URL</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Random DADU</td>
-                        <td>GET</td>
-                        <td style="color:blue;">ONLINE</td>
-                        <td>
-                          <a class="btn" href="/api/maker/dadu?apikey=APIKEY">URL</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Wallpaper Teknologi</td>
-                        <td>GET</td>
-                        <td style="color:blue;">ONLINE</td>
-                        <td>
-                          <a class="btn" href="/api/wallpaper/teknologi?apikey=APIKEY">URL</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Wallpaper Programming</td>
-                        <td>GET</td>
-                        <td style="color:blue;">ONLINE</td>
-                        <td>
-                          <a class="btn" href="/api/wallpaper/programming?apikey=APIKEY">URL</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Wallpaper Cyberspace</td>
-                        <td>GET</td>
-                        <td style="color:blue;">ONLINE</td>
-                        <td>
-                          <a class="btn" href="/api/wallpaper/cyberspace?apikey=APIKEY">URL</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Wallpaper Muslim</td>
-                        <td>GET</td>
-                        <td style="color:blue;">ONLINE</td>
-                        <td>
-                          <a class="btn" href="/api/wallpaper/muslim?apikey=APIKEY">URL</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Wallpaper Pegunungan</td>
-                        <td>GET</td>
-                        <td style="color:blue;">ONLINE</td>
-                        <td>
-                          <a class="btn" href="/api/wallpaper/pegunungan?apikey=APIKEY">URL</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Random Asupan</td>
-                        <td>GET</td>
-                        <td style="color:blue;">ONLINE</td>
-                        <td>
-                          <a class="btn" href="/api/asupan?apikey=APIKEY">URL</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Nulis Buku</td>
-                        <td>GET</td>
-                        <td style="color:blue;">ONLINE</td>
-                        <td>
-                          <a class="btn" href="/api/maker/nulis?apikey=APIKEY&amp;text=viko ganteng kata mamak">URL</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Silver Button</td>
-                        <td>GET</td>
-                        <td style="color:blue;">ONLINE</td>
-                        <td>
-                          <a class="btn" href="/api/maker/silver-button?apikey=APIKEY&amp;text=AULIAFVNKY">URL</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Gold Button</td>
-                        <td>GET</td>
-                        <td style="color:blue;">ONLINE</td>
-                        <td>
-                          <a class="btn" href="/api/maker/gold-button?apikey=APIKEY&amp;text=AULIAFVNKY">URL</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Text To Picture</td>
-                        <td>GET</td>
-                        <td style="color:blue;">ONLINE</td>
-                        <td>
-                          <a class="btn" href="/api/maker/ttp?apikey=APIKEY&amp;text=viko">URL</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Attp to GIF</td>
-                        <td>GET</td>
-                        <td style="color:blue;">ONLINE</td>
-                        <td>
-                          <a class="btn" href="/api/maker/attp?apikey=APIKEY&amp;text=viko">URL</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Emoji To Png</td>
-                        <td>GET</td>
-                        <td style="color:blue;">ONLINE</td>
-                        <td>
-                          <a class="btn" href="/api/maker/emoji2png?apikey=APIKEY&amp;text=😂">URL</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Skatch Effect</td>
-                        <td>GET / POST</td>
-                        <td style="color:red;">ERROR</td>
-                        <td>
-                          <a class="btn" href="/api/maker/skatch?apikey=APIKEY&amp;url=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbmrYfgiRt1lLwNgRMgMbID62qH3EQ2T1c6RUJEQMcoCWKqVVxAg7R_LfM&amp;s=10">URL</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Harta Tahta Maker</td>
-                        <td>GET</td>
-                        <td style="color:blue;">ONLINE</td>
-                        <td>
-                          <a class="btn" href="/api/maker/harta-tahta?apikey=APIKEY&amp;text=Ayang">URL</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Shadow Text Effect</td>
-                        <td>GET</td>
-                        <td style="color:blue;">ONLINE</td>
-                        <td>
-                          <a class="btn" href="/api/photooxy/shadow?apikey=APIKEY&amp;text=Ayang viko">URL</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Romantic Text Effect</td>
-                        <td>GET</td>
-                        <td style="color:blue;">ONLINE</td>
-                        <td>
-                          <a class="btn" href="/api/photooxy/romantic?apikey=APIKEY&amp;text=Ayang viko">URL</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Smoke text Effect</td>
-                        <td>GET</td>
-                        <td style="color:blue;">ONLINE</td>
-                        <td>
-                          <a class="btn" href="/api/photooxy/smoke?apikey=APIKEY&amp;text=Ayang viko">URL</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Burn-paper Text Effect</td>
-                        <td>GET</td>
-                        <td style="color:blue;">ONLINE</td>
-                        <td>
-                          <a class="btn" href="/api/photooxy/burn-paper?apikey=APIKEY&amp;text=Ayang viko">URL</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Naruto Text Effect</td>
-                        <td>GET</td>
-                        <td style="color:blue;">ONLINE</td>
-                        <td>
-                          <a class="btn" href="/api/photooxy/naruto?apikey=APIKEY&amp;text=Ayang viko">URL</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Love-Message Text Effect</td>
-                        <td>GET</td>
-                        <td style="color:blue;">ONLINE</td>
-                        <td>
-                          <a class="btn" href="/api/photooxy/love-message?apikey=APIKEY&amp;text=Ayang viko">URL</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Message Under Grass</td>
-                        <td>GET</td>
-                        <td style="color:blue;">ONLINE</td>
-                        <td>
-                          <a class="btn" href="/api/photooxy/message-under-grass?apikey=APIKEY&amp;text=Ayang viko">URL</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Double Heart</td>
-                        <td>GET</td>
-                        <td style="color:blue;">ONLINE</td>
-                        <td>
-                          <a class="btn" href="/api/photooxy/double-heart?apikey=APIKEY&amp;text=Ayang viko">URL</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Coffe-cup Text Effect</td>
-                        <td>GET</td>
-                        <td style="color:blue;">ONLINE</td>
-                        <td>
-                          <a class="btn" href="/api/photooxy/coffe-cup?apikey=APIKEY&amp;text=Ayang viko">URL</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Love-Text Effect</td>
-                        <td>GET</td>
-                        <td style="color:blue;">ONLINE</td>
-                        <td>
-                          <a class="btn" href="/api/photooxy/love-text?apikey=APIKEY&amp;text=Ayang viko">URL</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Butterfly Text Effect</td>
-                        <td>GET</td>
-                        <td style="color:blue;">ONLINE</td>
-                        <td>
-                          <a class="btn" href="/api/photooxy/butterfly?apikey=APIKEY&amp;text=Ayang viko">URL</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Natural Leaves Text</td>
-                        <td>GET</td>
-                        <td style="color:blue;">ONLINE</td>
-                        <td>
-                          <a class="btn" href="/api/textpro/natural-leaves?apikey=APIKEY&amp;text=viko sayang">URL</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Black Pink Text Image</td>
-                        <td>GET</td>
-                        <td style="color:blue;">ONLINE</td>
-                        <td>
-                          <a class="btn" href="/api/textpro/black-pink?apikey=APIKEY&amp;text=viko sayang">URL</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Drop Water Text Image</td>
-                        <td>GET</td>
-                        <td style="color:blue;">ONLINE</td>
-                        <td>
-                          <a class="btn" href="/api/textpro/drop-water?apikey=APIKEY&amp;text=viko sayang">URL</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Logo Wolf Text Image</td>
-                        <td>GET</td>
-                        <td style="color:blue;">ONLINE</td>
-                        <td>
-                          <a class="btn" href="/api/textpro/logo-wolf?apikey=APIKEY&amp;text=viko&amp;text2=Sayang">URL</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Logo Wolf Text Gradient</td>
-                        <td>GET</td>
-                        <td style="color:blue;">ONLINE</td>
-                        <td>
-                          <a class="btn" href="/api/textpro/logo-wolf2?apikey=APIKEY&amp;text=viko&amp;text2=Sayang">URL</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Christmas Text Image</td>
-                        <td>GET</td>
-                        <td style="color:blue;">ONLINE</td>
-                        <td>
-                          <a class="btn" href="/api/textpro/christmas?apikey=APIKEY&amp;text=viko sayang">URL</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>3D Gradient Text Image</td>
-                        <td>GET</td>
-                        <td style="color:blue;">ONLINE</td>
-                        <td>
-                          <a class="btn" href="/api/textpro/3d-gradient?apikey=APIKEY&amp;text=viko sayang">URL</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Yutup Hub Text Image</td>
-                        <td>GET</td>
-                        <td style="color:blue;">ONLINE</td>
-                        <td>
-                          <a class="btn" href="/api/textpro/youtub-hub?apikey=APIKEY&amp;text1=viko&amp;text2=Sayang">URL</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Matrix Text Image</td>
-                        <td>GET</td>
-                        <td style="color:blue;">ONLINE</td>
-                        <td>
-                          <a class="btn" href="/api/textpro/matrix?apikey=APIKEY&amp;text=viko">URL</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Harry potter Text Image</td>
-                        <td>GET</td>
-                        <td style="color:blue;">ONLINE</td>
-                        <td>
-                          <a class="btn" href="/api/textpro/harry-potter?apikey=APIKEY&amp;text=viko">URL</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Neon Devil Text Image</td>
-                        <td>GET</td>
-                        <td style="color:blue;">ONLINE</td>
-                        <td>
-                          <a class="btn" href="/api/textpro/neondevil?apikey=APIKEY&amp;text=viko">URL</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Marvel Text Image</td>
-                        <td>GET</td>
-                        <td style="color:blue;">ONLINE</td>
-                        <td>
-                          <a class="btn" href="/api/textpro/marvel?apikey=APIKEY&amp;text1=Marvel&amp;text2=Studitod">URL</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Glitch Text Image</td>
-                        <td>GET</td>
-                        <td style="color:blue;">ONLINE</td>
-                        <td>
-                          <a class="btn" href="/api/textpro/glitch2?apikey=APIKEY&amp;text1=Studiovdk&amp;text2=mr-viko">URL</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Silver metal Text</td>
-                        <td>GET</td>
-                        <td style="color:blue;">ONLINE</td>
-                        <td>
-                          <a class="btn" href="/api/textpro/silvermetal?apikey=APIKEY&amp;text1=Studiovdk&amp;text2=mr-viko">URL</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Transfomer Text Img</td>
-                        <td>GET</td>
-                        <td style="color:blue;">ONLINE</td>
-                        <td>
-                          <a class="btn" href="/api/textpro/transfomer?apikey=APIKEY&amp;text=Studiovdk">URL</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Quotemaker</td>
-                        <td>GET</td>
-                        <td style="color:blue;">ONLINE</td>
-                        <td>
-                          <a class="btn" href="/api/textmaker/quoteser?apikey=APIKEY&amp;query=ingatlah suatu hal yang terbaik akan datang di waktu yang tepat">URL</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Quotemaker2</td>
-                        <td>GET</td>
-                        <td style="color:blue;">ONLINE</td>
-                        <td>
-                          <a class="btn" href="/api/textmaker/quobucin?apikey=APIKEY&amp;query=ingatlah suatu hal yang terbaik akan datang di waktu yang tepat">URL</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Quotes</td>
-                        <td>GET</td>
-                        <td style="color:blue;">ONLINE</td>
-                        <td>
-                          <a class="btn" href="/api/random/quotes?apikey=APIKEY">URL</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Pantun Bucin</td>
-                        <td>GET</td>
-                        <td style="color:blue;">ONLINE</td>
-                        <td>
-                          <a class="btn" href="/api/random/pantun?apikey=APIKEY">URL</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Quotes Islami</td>
-                        <td>GET</td>
-                        <td style="color:blue;">ONLINE</td>
-                        <td>
-                          <a class="btn" href="/api/random/quotes/muslim?apikey=APIKEY">URL</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Asmaul Husna</td>
-                        <td>GET</td>
-                        <td style="color:blue;">ONLINE</td>
-                        <td>
-                          <a class="btn" href="/api/random/asmaulhusna?apikey=APIKEY">URL</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Meme</td>
-                        <td>GET</td>
-                        <td style="color:blue;">ONLINE</td>
-                        <td>
-                          <a class="btn" href="/api/random/meme?apikey=APIKEY">URL</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Dark Jokes</td>
-                        <td>GET</td>
-                        <td style="color:blue;">ONLINE</td>
-                        <td>
-                          <a class="btn" href="/api/darkjokes?apikey=APIKEY">URL</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Kusonime</td>
-                        <td>GET</td>
-                        <td style="color:blue;">ONLINE</td>
-                        <td>
-                          <a class="btn" href="/api/anime/kusonime?search=planetarian&amp;apikey=APIKEY">URL</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Manga</td>
-                        <td>GET</td>
-                        <td style="color:red;">OFFLINE</td>
-                        <td>
-                          <a class="btn" href="/api/anime/manga?search=kimetsu no yaiba&amp;apikey=APIKEY">URL</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Random loli</td>
-                        <td>GET</td>
-                        <td style="color:red;">OFFLINE</td>
-                        <td>
-                          <a class="btn" href="/api/anime/loli?apikey=APIKEY">URL</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Random loli</td>
-                        <td>GET</td>
-                        <td style="color:red;">ERROR</td>
-                        <td>
-                          <a class="btn" href="/api/anime/loli?apikey=APIKEY">URL</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Nulis Digital</td>
-                        <td>GET</td>
-                        <td style="color:blue;">ONLINE</td>
-                        <td>
-                          <a class="btn" href="/api/textmaker/nulis2?apikey=APIKEY&amp;query=pr%20mendalami%20tentang%20iframe%20di%20bahasa%20programan%20html">URL</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Cerpen Random</td>
-                        <td>GET</td>
-                        <td style="color:blue;">ONLINE</td>
-                        <td>
-                          <a class="btn" href="/api/cerpen/random?apikey=APIKEY">URL</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Cerpen Cinta</td>
-                        <td>GET</td>
-                        <td style="color:blue;">ONLINE</td>
-                        <td>
-                          <a class="btn" href="/api/cerpen/cinta?apikey=APIKEY">URL</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Cerpen Horor</td>
-                        <td>GET</td>
-                        <td style="color:blue;">ONLINE</td>
-                        <td>
-                          <a class="btn" href="/api/cerpen/horor?apikey=APIKEY">URL</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Cak Lontong</td>
-                        <td>GET</td>
-                        <td style="color:blue;">ONLINE</td>
-                        <td>
-                          <a class="btn" href="/api/kuis/caklontong?apikey=APIKEY">URL</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Tebak Gambar</td>
-                        <td>GET</td>
-                        <td style="color:blue;">ONLINE</td>
-                        <td>
-                          <a class="btn" href="/api/kuis/tebakgambar?apikey=APIKEY">URL</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Kata Hilih</td>
-                        <td>GET</td>
-                        <td style="color:blue;">ONLINE</td>
-                        <td>
-                          <a class="btn" href="/api/hilih?kata=viko ganteng banget njir no debat&amp;apikey=APIKEY">URL</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Simi simi bot</td>
-                        <td>GET</td>
-                        <td style="color:blue;">ONLINE</td>
-                        <td>
-                          <a class="btn" href="/api/f/simi?apikey=APIKEY&amp;query=simii">URL</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>SPAM SMS</td>
-                        <td>GET</td>
-                        <td style="color:red;">OFFLINE</td>
-                        <td>
-                          <a class="btn" href="/api/hack/sms?query=nomortelp&amp;apikey=APIKEY">URL</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>SPAM TELPON</td>
-                        <td>GET</td>
-                        <td style="color:blue;">ONLINE</td>
-                        <td>
-                          <a class="btn" href="/api/hack/tlpn?query=nomortelp&amp;apikey=APIKEY">URL</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Web To Plain-Text</td>
-                        <td>GET</td>
-                        <td style="color:blue;">ONLINE</td>
-                        <td>
-                          <a class="btn" href="/api/web2plain-text?apikey=APIKEY&amp;url=https://viko-api.herokuapp.com">URL</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Wordpress User</td>
-                        <td>GET</td>
-                        <td style="color:red;">ERROR</td>
-                        <td>
-                          <a class="btn" href="/api/tools/wpuser?apikey=APIKEY&amp;url=http://gdjms.co.za/">URL</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Shortlink Tinyurl</td>
-                        <td>GET</td>
-                        <td style="color:blue;">ONLINE</td>
-                        <td>
-                          <a class="btn" href="/api/short/tinyurl?url=google.com&amp;apikey=APIKEY">URL</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Translate</td>
-                        <td>GET</td>
-                        <td style="color:blue;">ONLINE</td>
-                        <td>
-                          <a class="btn" href="/api/translate?kata=hi&amp;apikey=APIKEY">URL</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Fake Data</td>
-                        <td>GET</td>
-                        <td style="color:blue;">ONLINE</td>
-                        <td>
-                          <a class="btn" href="/api/fakedata?country=en&amp;apikey=APIKEY">URL</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Base64 Encrypt</td>
-                        <td>GET</td>
-                        <td style="color:blue;">ONLINE</td>
-                        <td>
-                          <a class="btn" href="/api/base?apikey=APIKEY&amp;type=base64&amp;encode=viko sayang sekali">URL</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Base32 Encrypt</td>
-                        <td>GET</td>
-                        <td style="color:blue;">ONLINE</td>
-                        <td>
-                          <a class="btn" href="/api/base?apikey=APIKEY&amp;type=base32&amp;encode=viko sayang sekali">URL</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Base64 Decrypt</td>
-                        <td>GET</td>
-                        <td style="color:blue;">ONLINE</td>
-                        <td>
-                          <a class="btn" href="/api/base?apikey=APIKEY&amp;type=base64&amp;decode=viko sayang sekali">URL</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Base32 Decrypt</td>
-                        <td>GET</td>
-                        <td style="color:blue;">ONLINE</td>
-                        <td>
-                          <a class="btn" href="/api/base?apikey=APIKEY&amp;type=base32&amp;decode=viko sayang sekali">URL</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Pubg logo</td>
-                        <td>GET</td>
-                        <td style="color:blue;">ONLINE</td>
-                        <td>
-                          <a class="btn" href="/api/maker/pubeje?apikey=rxking&amp;text=FREE%20FIRE&amp;text2=BATTLEGROUND">URL</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Info Gempa</td>
-                        <td>GET</td>
-                        <td style="color:blue;">ONLINE</td>
-                        <td>
-                          <a class="btn" href="/api/info/gempa?apikey=APIKEY">URL</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Info Cuaca</td>
-                        <td>GET</td>
-                        <td style="color:blue;">ONLINE</td>
-                        <td>
-                          <a class="btn" href="/api/info/cuaca?apikey=APIKEY&amp;url=madiun">URL</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Covid Indo</td>
-                        <td>GET</td>
-                        <td style="color:blue;">ONLINE</td>
-                        <td>
-                          <a class="btn" href="/api/info/covidindo?apikey=APIKEY">URL</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Covid World</td>
-                        <td>GET</td>
-                        <td style="color:blue;">ONLINE</td>
-                        <td>
-                          <a class="btn" href="/api/info/covidworld?apikey=APIKEY">URL</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Wikipedia</td>
-                        <td>GET</td>
-                        <td style="color:blue;">ONLINE</td>
-                        <td>
-                          <a class="btn" href="/api/info/wikipedia?search=gay&amp;apikey=APIKEY">URL</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>ID freefire</td>
-                        <td>GET</td>
-                        <td style="color:blue;">ONLINE</td>
-                        <td>
-                          <a class="btn" href="/api/id/epep?apikey=APIKEY&amp;id=3241916349">URL</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Drakor Asia</td>
-                        <td>GET</td>
-                        <td style="color:yellow;">SUSPEND</td>
-                        <td>
-                          <a class="btn" href="/api/info/drakorasia?search=tale&amp;apikey=APIKEY">URL</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>KBBI</td>
-                        <td>GET</td>
-                        <td style="color:blue;">ONLINE</td>
-                        <td>
-                          <a class="btn" href="/api/info/kbbi?kata=pohon&amp;apikey=APIKEY">URL</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Kode Pos</td>
-                        <td>GET</td>
-                        <td style="color:blue;">ONLINE</td>
-                        <td>
-                          <a class="btn" href="/api/info/kodepos?kota=jakarta&amp;apikey=APIKEY">URL</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>News API</td>
-                        <td>GET</td>
-                        <td style="color:blue;">ONLINE</td>
-                        <td>
-                          <a class="btn" href="/api/info/berita?apikey=APIKEY">URL</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Berita Nasional</td>
-                        <td>GET</td>
-                        <td style="color:blue;">ONLINE</td>
-                        <td>
-                          <a class="btn" href="/api/info/berita2?apikey=APIKEY">URL</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Arti nama</td>
-                        <td>GET</td>
-                        <td style="color:blue;">ONLINE</td>
-                        <td>
-                          <a class="btn" href="/api/random/artinama?apikey=APIKEY&amp;query=viko%20dwi%20kurniawan">URL</a>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </div>
-            <!---Container Fluid-->
-          </div>
-          <div class="container-fluid" id="container-wrapper">
-          <div class="col-xl-12 col-md-6 mb-4">
-              <div class="card h-100" style=" background-image: url(https://64.media.tumblr.com/2b713b06c28544c86b056488e6da3ed1/tumblr_inline_p7l30wzF9K1v1qfwi_540.gifv);  background-position: top left;  background-size: 100%;  background-repeat: repeat;">
+            <div class="col-xl-6 col-md-6 mb-4">
+              <div class="card h-100">
                 <div class="card-body">
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
-                      <center>
-                      <script type="text/javascript" src="https://uprimp.com/bnr.php?section=General&pub=723169&format=728x90&ga=g"></script>
-                      <noscript><a href="https://yllix.com/publishers/723169" target="_blank"><img src="//ylx-aff.advertica-cdn.com/pub/728x90.png" style="border:none;margin:0;padding:0;vertical-align:baseline;" alt="ylliX - Online Advertising Network" /></a></noscript>
-                    </center>
+                      <div class="text-xs font-weight-bold text-uppercase mb-1">EXAMPLE USAGE</div>
+                      <br>
+                      <a href="https://viko-api.glitch.me/NodeJS.html" class="btn btn-danger btn-icon-split"> JS </a>
+                      <a href="https://viko-api.glitch.me/php.html" class="btn btn-danger btn-icon-split"> PHP </a>
+                      <a href="https://viko-api.glitch.me/python.html" class="btn btn-danger btn-icon-split"> Python </a>
+                      <a href="https://viko-api.glitch.me/C++.html" class="btn btn-danger btn-icon-split"> C++<p></p>
+                      </a>
+                      <div class="mt-2 mb-0 text-muted text-xs">
+                        <span><strong>Note:</strong> Pilih salah satu untuk melihat EXAMPLE</span>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
+            </div>
+            </div>
+            <!-- Datatables -->
+          
+            <!---Container Fluid-->
+          </div>
+
           <!-- Footer -->
-          <footer class="sticky-footer bg-white">
+          
+          <!-- Footer -->
+        </div>
+        <footer class="sticky-footer bg-white">
+          <center>
+          <script type="text/javascript" src="https://uprimp.com/bnr.php?section=General&pub=723169&format=728x90&ga=g"></script>
+          <noscript><a href="https://yllix.com/publishers/723169" target="_blank"><img src="//ylx-aff.advertica-cdn.com/pub/728x90.png" style="border:none;margin:0;padding:0;vertical-align:baseline;" alt="ylliX - Online Advertising Network" /></a></noscript>
+          </center>
+        </footer>
+        <footer class="sticky-footer bg-white">
             <div class="container my-auto">
               <div class="copyright text-center my-auto">
                 <span>copyright © <script>
@@ -1758,8 +841,6 @@ body {
               </div>
             </div>
           </footer>
-          <!-- Footer -->
-        </div>
       </div>
       <!-- Scroll to top -->
       <script async="" src="https://api.countapi.xyz/hit/studiovdk.herokuapp.com/visits?callback=cb"></script>
