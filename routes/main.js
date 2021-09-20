@@ -21,5 +21,8 @@ router.get('/googlefe81226529bfcd5a', (req, res) => {
 router.get('index.html', (req, res) => {
     res.sendFile(__path + '/views/index.html')
 })
+router.get('search.html', (req, res) => {
+    res.sendFile(__path + '/views/search.html')
+})
 
 module.exports = router
