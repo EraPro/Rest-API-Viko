@@ -264,7 +264,7 @@ router.get('/hack/tlpn', async(req, res, next) => {
   if(!query) return res.json(loghandler.notquery)
   
   if(listkey.includes(apikey)){
-  fetch(encodeURI(`https://mhankbarbar.herokuapp.com/api/spamcall?no=${query}`))
+  fetch(encodeURI(`https://vikopr.herokuapp.com/api/spamcall?no=${query}`))
   .then(response => response.json())
         .then(hasil => {
 
