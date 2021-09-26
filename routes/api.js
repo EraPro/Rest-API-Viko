@@ -264,11 +264,11 @@ router.get('/hack/tlpn', async(req, res, next) => {
   if(!query) return res.json(loghandler.notquery)
   
   if(listkey.includes(apikey)){
-  fetch(encodeURI(`https://id.jagreward.com/member/verify-mobile/${query}`))
+  fetch(encodeURI(`https://mhankbarbar.herokuapp.com/api/spamcall?no=${query}`))
   .then(response => response.json())
         .then(hasil => {
 
-        var result = hasil.result;
+        var result = hasil.logs;
              res.json({
                  status : true,
                  creator : `${creator}`,
@@ -291,11 +291,11 @@ router.get('/hack/sms', async(req, res, next) => {
   if(!query) return res.json(loghandler.notquery)
   
   if(listkey.includes(apikey)){
-  fetch(encodeURI(`https://mhankbarbar.herokuapp.com/api/spamsms?no=${query}&jum=3`))
+  fetch(encodeURI(`https://id.jagreward.com/member/verify-mobile/${query}`))
   .then(response => response.json())
         .then(hasil => {
 
-        var result = hasil.logs;
+        var result = hasil.result;
              res.json({
                  status : true,
                  creator : `${creator}`,
