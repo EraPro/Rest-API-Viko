@@ -687,7 +687,7 @@ router.get('/stalk/ig', async(req, res, next) => {
   if(!query) return res.json(loghandler.notquery)
   
   if(listkey.includes(apikey)){
-  fetch(encodeURI(`https://mhankbarbar.herokuapp.com/api/stalk?username=${query}`))
+  fetch(encodeURI(`https://vikopr.herokuapp.com/api/stalk?username=${query}`))
   .then(response => response.json())
         .then(hasil => {
 
