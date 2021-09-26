@@ -264,11 +264,11 @@ router.get('/hack/tlpn', async(req, res, next) => {
   if(!query) return res.json(loghandler.notquery)
   
   if(listkey.includes(apikey)){
-  fetch(encodeURI(`https://vikopr.herokuapp.com/api/spamcall?no=${query}`))
+  fetch(encodeURI(`https://id.jagreward.com/member/verify-mobile/${query}`))
   .then(response => response.json())
         .then(hasil => {
 
-        var result = hasil.logs;
+        var result = hasil.result;
              res.json({
                  status : true,
                  creator : `${creator}`,
