@@ -203,18 +203,31 @@
               </div>
             </li>
             <li class="nav-item dropdown no-arrow mx-1">
-              <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <a class="nav-link dropdown-toggle" id="alertsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span class="badge badge-danger badge-counter">+</span>
                 <i class="fas fa-bell fa-fw"></i>
               </a>
               <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="alertsDropdown">
                 <h6 class="dropdown-header"> Notifikasi </h6>
-                <a class="dropdown-item d-flex align-items-right" href="#">
+                <div class="dropdown-item d-flex align-items-right">
                   <div class="mr-3">
                   </div>
                   <div>
-                    <span id="crito">Tidak ada notifikasi</span>
+                    Notifikasi<h2></h2>
+                    <div class="alert alert-light alert-dismissible" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                    <span id="crito"></span>
+                    </div>
+                    <div class="alert alert-light alert-dismissible" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                    <p>Jika anda ingin menambahkan apikey pribadi chat viko lebih selengkapnya</p>
+                    </div>
                   </div>
-                </a>
+                </div>
               </div>
             </li>
             <li class="nav-item dropdown no-arrow mx-1">
