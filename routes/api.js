@@ -155,7 +155,7 @@ loghandler = {
         status: false,
         creator: `${creator}`,
         code: 404,
-        result: 'apikey tidak ditemukan viko-api.herokuapp.com'
+        result: 'APIKEY SALAH, Silahkan kunjungi viko-api.herokuapp.com terlebih dahulu'
     },
     invalidlink: {
         status: false,
@@ -997,7 +997,7 @@ router.get('/info/berita', async (req, res, next) => {
 	if(!Apikey) return res.json(loghandler.notparam)
 	if(listkey.includes(Apikey)){
 
-       fetch(encodeURI(`http://docs-jojo.herokuapp.com/api/cnn-nasional`))
+       fetch(encodeURI(`https://newsapi.org/v2/everything?q=tesla&from=2021-08-27&sortBy=publishedAt&apiKey=c0d2a1336d194743955b4170bd86f7af`))
         .then(response => response.json())
         .then(data => {
         var result = data;
@@ -3303,7 +3303,7 @@ router.get('/cekapikey', async(req, res, next) => {
       status: 'active',
       creator: `${creator}`,
       apikey: `${apikey}`,
-      result: 'APIKEY AKTIF, selamat bersenang senang:)'
+      result: 'APIKEY BENAR'
     })
   } else {
     res.json(loghandler.invalidKey)
