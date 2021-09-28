@@ -1773,7 +1773,7 @@ router.get('/info/wikipedia', async (req, res, next) => {
 	if(listkey.includes(Apikey)){
         if(!search) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter search"})
 
-       fetch(encodeURI(`https://mhankbarbar.herokuapp.com/api/wiki?q=${search}`))
+       fetch(encodeURI(`https://vikopr.herokuapp.com/api/wiki?q=${search}`))
         .then(response => response.json())
         .then(data => {
         var result = data.result;
