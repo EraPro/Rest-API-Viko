@@ -1779,6 +1779,7 @@ router.get('/info/wikipedia', async (req, res, next) => {
         .then(data => {
         var result = data.result;
              res.json({
+		 creator: `${creator}`,
                  result
              })
          })
@@ -2140,16 +2141,21 @@ router.get('/kuis/caklontong', async (req, res, next) => {
         var Apikey = req.query.apikey
 	if(!Apikey) return res.json(loghandler.notparam)
 	if(listkey.includes(Apikey)){
-       fetch(encodeURI(`https://docs-api-zahirrr.herokuapp.com/api/quote?type=caklontong`))
+       fetch(encodeURI(`http://vikoapi-index.herokuapp.com/api/caklontong?apikey=nmrZFVhu`))
         .then(response => response.json())
         .then(data => {
-        var result = data;
+        var soalnya = data.question;
+	var jwbane = data.answer;
+	var detailnya = data.detail;
              res.json({
-                 result
+		 creator: `${creator}`,
+                 soalnya,
+		 jwbane,
+		 detailnya
              })
          })
          .catch(e => {
-         	res.json(loghandler.error)
+         res.json(loghandler.error)
 })
 } else {
 res.json(loghandler.invalidKey)
