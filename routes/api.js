@@ -418,6 +418,7 @@ router.get("/pinterest", async(req, res, next) => {
 	  
 
 router.get('/f/simi', async(req, res, next) => {
+  const query = req.query.query;
   const apikey = req.query.apikey;
   if(!apikey) return res.json(loghandler.notparam)
   
