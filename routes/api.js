@@ -419,9 +419,7 @@ router.get("/pinterest", async(req, res, next) => {
 
 router.get('/f/simi', async(req, res, next) => {
   const apikey = req.query.apikey;
-  const query = req.query.query;
   if(!apikey) return res.json(loghandler.notparam)
-  if(!query) return res.json(loghandler.notquery)
   
   if(listkey.includes(apikey)){
   fetch(encodeURI(`https://api.simsimi.net/v2/?text=${query}&lc=id&cf=false`))
