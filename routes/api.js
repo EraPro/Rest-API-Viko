@@ -155,7 +155,7 @@ loghandler = {
         status: false,
         creator: `${creator}`,
         code: 404,
-        result: 'APIKEY SALAH, https://viko-api.herokuapp.com/docs. pastikan anda mengunjungi situs nya untuk melihat apikeynya'
+        result: 'APIKEY SALAH, https://viko-api.herokuapp.com/docs. pastikan anda pernah'
     },
     invalidlink: {
         status: false,
@@ -170,7 +170,7 @@ loghandler = {
     error: {
         status: false,
         creator: `${creator}`,
-        result: '500 - internal server error, silahkan tunggu beberapa saat'
+        result: '500 - internal server error'
     }
 }
 
