@@ -155,7 +155,7 @@ loghandler = {
         status: false,
         creator: `${creator}`,
         code: 404,
-        result: 'APIKEY SALAH, https://viko-api.herokuapp.com/docs. pastikan anda pernah'
+        result: 'APIKEY SALAH, pastikan anda pernah berlangganan di https://viko-api.herokuapp.com/docs'
     },
     invalidlink: {
         status: false,
@@ -3288,7 +3288,7 @@ router.get('/cekapikey', async(req, res, next) => {
       status: 'active',
       creator: `${creator}`,
       apikey: `${apikey}`,
-      result: 'APIKEY BENAR'
+      result: 'APIKEY BENAR, lihat dokumen https://viko-api.herokuapp.com/docs'
     })
   } else {
     res.json(loghandler.invalidKey)
