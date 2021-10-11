@@ -466,7 +466,7 @@
               </a>
               <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="alertsDropdown">
                 <h6 class="dropdown-header"> Notifikasi </h6>
-                <div class="dropdown-item d-flex align-items-right" style="background-image: url(https://cdn.dribbble.com/users/1770290/screenshots/6220590/bg_82.gif">
+                <div class="dropdown-item d-flex align-items-right" style="background-image: url(https://www.thepaintstoreonline.com/wp-content/uploads/2018/05/100280.jpg)">
                   <div class="mr-3">
                   </div>
                   <div>
@@ -545,6 +545,9 @@
                       </lord-icon>
                     </div>
                   </div>
+                  <a tabindex="0" role="button" data-toggle="popover" data-trigger="focus"
+                    title="IP ADDRESS"
+                    data-content="Internet Protocol Address adalah label numerik yang ditetapkan untuk setiap perangkat yang terhubung ke jaringan komputer yang menggunakan Protokol Internet untuk komunikasi." aria-hidden="true"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
                 </div>
               </div>
             </div>
@@ -569,6 +572,10 @@
                       </lord-icon>
                     </div>
                   </div>
+                  <h4></h4>
+                  <a tabindex="0" role="button" data-toggle="popover" data-trigger="focus"
+                    title="APIKEY"
+                    data-content="APIKEY atau Kunci antarmuka pemrograman aplikasi adalah pengidentifikasi unik yang digunakan untuk mengautentikasi pengguna, pengembang, atau program panggilan ke API. Namun, mereka biasanya digunakan untuk mengotentikasi proyek dengan API daripada pengguna manusia."><i class="fa fa-info-circle" aria-hidden="true"></i></a>
                 </div>
               </div>
             </div>
@@ -885,12 +892,65 @@ body {
                 </div>
               </div>
             </div>
+            <div class="col-lg-11">
+              <div class="card mb-4">
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                  <h6 class="m-0 font-weight-bold text-primary">Memory RAM</h6>
+                </div>
+                <div class="card-body">
+                  <p>Memori RAM kamu <strong id="resultRAM"></strong> GiB</p>
+                  <p><b>Rekomendasi, membutuhkan minimal 4GB RAM jika dibawah 4GB mungkin akan slow respon menggunakan rest api ini. membutuhkan jaringan stabil dan spesifikasi tinggi</b>
+                    <p></p><code>4 GiB / <strong id="resultic"></strong> GiB</code></p>
+                    <p id="agen"></p>
+                    <div id="progresRAM">
+                    </div>
+                </div>
+              </div>
+            </div>
             </div>
             <!-- Datatables -->
           
             <!---Container Fluid-->
           </div>
-
+          <script type="text/javascript">
+          document.getElementById('resultRAM').innerHTML = navigator.deviceMemory || 'unknown'
+          document.getElementById('resultic').innerHTML = navigator.deviceMemory || 'unknown'
+          document.getElementById('agen').innerHTML = navigator.userAgent
+          var devicek = navigator.deviceMemory
+        if(devicek == 1){
+          alert('Apakah yakin ingin menggunakan rest api viko dibawah ram 4GB')
+          const respuker = `
+          <div class="progress" style="height: 14px;">
+                    <div class="progress-bar" role="progressbar" style="width: 10%;" aria-valuenow="3"
+                      aria-valuemin="0" aria-valuemax="4"></div>
+                  </div><br><p>Ram kamu terlalu rendah untuk menggunakan rest api ini</p>`
+            document.getElementById('progresRAM').innerHTML = respuker || 'unknown'
+        }
+        if(devicek == 2){
+          const respuker = `
+          <div class="progress" style="height: 14px;">
+                    <div class="progress-bar" role="progressbar" style="width: 40%;" aria-valuenow="3"
+                      aria-valuemin="0" aria-valuemax="4"></div>
+                  </div><br><p>Ram kamu terlalu rendah untuk menggunakan rest api ini</p>`
+            document.getElementById('progresRAM').innerHTML = respuker || 'unknown'
+        }
+        if(devicek == 3){
+          const respuker = `
+          <div class="progress" style="height: 14px;">
+                    <div class="progress-bar" role="progressbar" style="width: 70%;" aria-valuenow="3"
+                      aria-valuemin="0" aria-valuemax="4"></div>
+                  </div><br><p>Ram kamu memadai silahkan menggunakan rest api ini</p>`
+            document.getElementById('progresRAM').innerHTML = respuker || 'unknown'
+        }
+        if(devicek == 4){
+          const respuker = `
+          <div class="progress" style="height: 14px;">
+                    <div class="progress-bar" role="progressbar" style="width: 100%;" aria-valuenow="3"
+                      aria-valuemin="0" aria-valuemax="4"></div>
+                  </div><br><p>Ram kamu memadai silahkan menggunakan rest api ini</p>`
+            document.getElementById('progresRAM').innerHTML = respuker || 'unknown'
+        }
+          </script>
           <!-- Footer -->
           <style>
 body {font-family: Arial, Helvetica, sans-serif;}
@@ -968,7 +1028,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
 <button class="open-button" onclick="openForm()"><i class="fas fa-comments"></i></button>
 
 <div class="form-popup" id="myForm" >
-  <form class="form-container" style="background-image: url(https://cdn.dribbble.com/users/1770290/screenshots/6220590/bg_82.gif">
+  <form class="form-container" style="background-image: url(https://www.thepaintstoreonline.com/wp-content/uploads/2018/05/100280.jpg)">
     <iframe src="https://www5.cbox.ws/box/?boxid=928423&boxtag=iwgGdE" width="100%" height="450" allowtransparency="yes" allow="autoplay" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto"></iframe> 
     <button onclick="closeForm()">Close chat Group</button>
   </form>
