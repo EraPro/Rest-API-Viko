@@ -24,5 +24,8 @@ router.get('index.html', (req, res) => {
 router.get('/search.html', (req, res) => {
     res.sendFile(__path + '/views/search.html')
 })
+router.get('/blog', (req, res) => {
+    res.sendFile(__path + '/views/blog.html')
+})
 
 module.exports = router
