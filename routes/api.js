@@ -1163,14 +1163,15 @@ router.get('/info/cuaca', async(req, res, next) => {
   if(!apikey) return res.json(loghandler.notparam)
   
   if(listkey.includes(apikey)){
-    fetch(encodeURI(`https://freerestapi.herokuapp.com/api/cuaca?p=${url}`))
+    fetch(encodeURI(`https://hadi-api.herokuapp.com/api/cuaca?prov=${url}`))
     .then(response => response.json())
         .then(data => {
-        var result = data.hasil;
+        var result = data.result;
              res.json({
                status: true,
                code: 200,
-               creator: `${creator}`,
+	       creator: `${creator}`,
+               Sumber: `bmkg`,
                  result
              })
          })
@@ -3288,7 +3289,7 @@ router.get('/cekapikey', async(req, res, next) => {
       status: 'active',
       creator: `${creator}`,
       apikey: `${apikey}`,
-      result: 'APIKEY BENAR, lihat dokumen https://viko-api.herokuapp.com/docs'
+      result: 'APIKEY BENAR, lihat dokumen viko-api'
     })
   } else {
     res.json(loghandler.invalidKey)
