@@ -1171,8 +1171,9 @@ router.get('/info/cuaca', async(req, res, next) => {
                status: true,
                code: 200,
 	       creator: `${creator}`,
+	       error_logs: data.msg,
                Sumber: `bmkg`,
-                 result
+               result
              })
          })
          .catch(e => {
