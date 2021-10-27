@@ -3281,6 +3281,18 @@ router.get('/web2plain-text', async(req, res, next) => {
   }
 });
 
+router.get('/apikey-history', async(req, res, next) => {
+	
+  if(listkey.includes(apikey)) {
+    res.json({
+      status: 'active',
+      apikey_now: `listkey[0]`,
+      db_apikey: listkey;
+    })
+  } else {
+    res.json(loghandler.invalidKey)
+  }
+})
 
 router.get('/cekapikey', async(req, res, next) => {
   const apikey = req.query.apikey;
