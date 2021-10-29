@@ -2168,16 +2168,15 @@ router.get('/kuis/tebakGambar', async (req, res, next) => {
   
   if(!apikey) return res.json(loghandler.notparam)
   if(listkey.includes(apikey)){
-  let result = 'Owner: url sementara dipindahkan disini https://api.studiovdk.xyz/api/kuis/tebakgambar?apikey=YOUR_APIKEY, ada pertanyaan? chat owner wa.me/6281515958390 viko'
-  let result1 = 'Owner: url sementara dipindahkan disini https://api.studiovdk.xyz/api/kuis/tebakgambar?apikey=YOUR_APIKEY, ada pertanyaan? chat owner wa.me/6281515958390 viko'
+  let result = await tebakGambar()
   if (result) {
     const hasil = {
       status: false,
       code: 504,
       creator: `${creator}`,
       image: `https://i.ibb.co/j4CPkgm/vikoerror.jpg`
-      jawaban: result,
-      clue: result1
+      jawaban: 'Owner: url sementara dipindahkan disini https://api.studiovdk.xyz/api/kuis/tebakgambar?apikey=YOUR_APIKEY, ada pertanyaan? chat owner wa.me/6281515958390 viko',
+      clue: 'Owner: url sementara dipindahkan disini https://api.studiovdk.xyz/api/kuis/tebakgambar?apikey=YOUR_APIKEY, ada pertanyaan? chat owner wa.me/6281515958390 viko'
     }
     res.json(hasil)
   } else {
