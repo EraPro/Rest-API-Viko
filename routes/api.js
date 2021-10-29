@@ -2163,34 +2163,8 @@ res.json(loghandler.invalidKey)
 }
 })
 
-router.get('/kuis/tebakGambar', async (req, res, next) => {
-  var apikey = req.query.apikey;
-  
-  if(!apikey) return res.json(loghandler.notparam)
-  if(listkey.includes(apikey)){
-  let result = await tebakGambar()
-  if (result) {
-    const hasil = {
-      status: false,
-      code: 504,
-      creator: `${creator}`,
-      image: `https://i.ibb.co/j4CPkgm/vikoerror.jpg`
-      jawaban: 'Owner: url sementara dipindahkan disini https://api.studiovdk.xyz/api/kuis/tebakgambar?apikey=YOUR_APIKEY, ada pertanyaan? chat owner wa.me/6281515958390 viko',
-      clue: 'Owner: url sementara dipindahkan disini https://api.studiovdk.xyz/api/kuis/tebakgambar?apikey=YOUR_APIKEY, ada pertanyaan? chat owner wa.me/6281515958390 viko'
-    }
-    res.json(hasil)
-  } else {
-    return res.status(408).json({
-      status: res.statusCode,
-      error: 'Emror'
-    })
-  }
-  } else {
-  res.json(loghandler.invalidKey)
-  }
-})
 
-router.get('/kuis/tebakG', async (req, res, next) => {
+router.get('/kuis/tebakGambar', async (req, res, next) => {
   var apikey = req.query.apikey;
   
   if(!apikey) return res.json(loghandler.notparam)
