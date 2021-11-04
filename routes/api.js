@@ -3135,8 +3135,8 @@ router.get("/text-to-audio/tts", async (req, res, next) => {
   if(listkey.includes(apikey)) {
     let hasil = 'https://api.zeks.me/api/tts?apikey=pikodeka67&code='+ idbahasa +'&text='+ text 
     data = await fetch(hasil).then(v => v.buffer())
-    await fs.writeFileSync(__path +'/tmp/tts.webm', data)
-    res.sendFile(__path +'/tmp/tts.webm')
+    await fs.writeFileSync(__path +'/tmp/tts.mp3', data)
+    res.sendFile(__path +'/tmp/tts.mp3')
   } else {
     res.sendFile(__path + '/views/apikey-not-found.html');
   }
