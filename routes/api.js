@@ -3124,6 +3124,24 @@ router.get("/maker/pubeje", async (req, res, next) => {
   }
 })
 
+router.get("/text-to-audio/tts", async (req, res, next) => {
+  
+  apikey = req.query.apikey;
+  text = req.query.text;
+  idbahasa = req.query.text2;
+  if(!text) return res.json(loghandler.nottext)
+  if(!apikey) return res.json(loghandler.notparam)
+  
+  if(listkey.includes(apikey)) {
+    let hasil = 'https://api.zeks.me/api/tts?apikey=pikodeka67&code='+ idbahasa +'&text='+ text 
+    data = await fetch(hasil).then(v => v.buffer())
+    await fs.writeFileSync(__path +'/tmp/tts.webm', data)
+    res.sendFile(__path +'/tmp/tts.webm')
+  } else {
+    res.sendFile(__path + '/views/apikey-not-found.html');
+  }
+})
+
 router.get("/maker/gold-button", async (req, res, next) => {
   
   apikey = req.query.apikey;
