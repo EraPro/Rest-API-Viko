@@ -20,7 +20,7 @@ document.getElementById("thn").innerHTML = thn
 
 
 function cb(response) {
-    document.getElementById('visits').innerText = response.value;
+    document.getElementById('visits').innerText = `Kecepatan merespon: ${response.value} ms`
 }
 
 var countDate = new Date('May 13 2021 00:00:00').getTime();
