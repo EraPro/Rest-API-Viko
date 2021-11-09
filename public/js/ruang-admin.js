@@ -137,7 +137,7 @@ if (countDownDate) {
 // Update the count down every 1 second 
 var x = setInterval(function() { 
  fetch("https://viko-api.herokuapp.com/api/about-info")
-	 .then(res=>res.text()).then(res=> {
+	 .then(res=>res.json()).then(res=> {
 
     // Get todays date and time 
     var now = new Date().getTime(); 
@@ -152,7 +152,7 @@ var x = setInterval(function() {
     var seconds = Math.floor((distance % (1000 * 60)) / 1000); 
  
     // Output the result in an element with id="demo" 
-    document.getElementById("vikoo").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s <br>Speed:" + res.speed_server
+    document.getElementById("vikoo").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s <br>Speed: " + res.speed_server
 }, 1000); 
 });
 // Version in Sidebar
