@@ -249,7 +249,7 @@ speed_server : speednya,
 speed_millisec : speedsec
 })
 });
-router.get("/about-system", async(req, res, next) => {
+router.get("/about-system-cpu", async(req, res, next) => {
 	var start = now()
         var end = now()
 	const speednya = (start-end).toFixed(3)
@@ -260,7 +260,20 @@ si.cpu(function(data) {
   brands: data.brand,
   speed: data.speed,
   core: data.cores,
-  physical: data.physicalCores,
+  physical: data.physicalCores
+})
+})
+});
+router.get("/about-system-current", async(req, res, next) => {
+	var start = now()
+        var end = now()
+	const speednya = (start-end).toFixed(3)
+	const speedsec = start.toFixed(3)
+si.currentLoad(function(data) {
+	res.json({
+  cpuload: data.currentLoad,
+  cpuuser: data.currentLoadUser,
+  loadsystem: data.currentLoadSystem
 })
 })
 });
