@@ -9,7 +9,7 @@ var zahirr = db.get("zahirr");
 }
  
 var creator = "mr.viko"
-
+var si = require('systeminformation');
 var secure = require('ssl-express-www');
 var cors = require('cors');
 var fetch = require('node-fetch');
@@ -249,7 +249,21 @@ speed_server : speednya,
 speed_millisec : speedsec
 })
 });
-
+router.get("/about-system", async(req, res, next) => {
+	var start = now()
+        var end = now()
+	const speednya = (start-end).toFixed(3)
+	const speedsec = start.toFixed(3)
+si.cpu(function(data) {
+	res.json({
+  manufuc: data.manufacturer,
+  brands: data.brand,
+  speed: data.speed,
+  core: data.cores,
+  physical: data.physicalCores,
+})
+})
+});
 router.get('/music/joox', async(req, res, next) => {
   const query = req.query.query;
   const apikey = req.query.apikey;
