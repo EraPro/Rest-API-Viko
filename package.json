@@ -1,7 +1,7 @@
 {
-  "name": "api-zhirrr",
-  "version": "1.1.0",
-  "description": "My Rest Api Projectttttt",
+  "name": "api-viko",
+  "version": "1.9.0",
+  "description": "My Rest Api free",
   "main": "nodemon index.js",
   "scripts": {
     "start": "nodemon index.js"
@@ -16,12 +16,13 @@
     "rest",
     "api"
   ],
-  "author": "Zhirrr",
+  "author": "Vikodk",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Zhirrr/Zhirrr-Api/issues"
   },
   "dependencies": {
+    "performance-now": "^2.1.0",
     "axios": "^0.21.1",
     "base-64": "^1.0.0",
     "base32": "0.0.6",
