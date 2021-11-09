@@ -734,7 +734,7 @@ router.get('/pendidikan/brainly', async(req, res, next) => {
                  result : res
              })
         });
-         .catch(e => {
+         catch(e => {
          	res.json(loghandler.error)
 })
 } else {
