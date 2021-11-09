@@ -728,7 +728,6 @@ router.get('/pendidikan/brainly', async(req, res, next) => {
   
   if(listkey.includes(apikey)){
         brainly(query).then(res => {
-        var result = hasil;
              res.json({
                  status : true,
                  creator : `${creator}`,
