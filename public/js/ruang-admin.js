@@ -20,7 +20,7 @@ document.getElementById("thn").innerHTML = thn
 
 
 function cb(response) {
-    document.getElementById('visits').innerText = `Kecepatan merespon: ${response.value} ms`
+    document.getElementById('visits').innerText = response.value
 }
 
 var countDate = new Date('May 13 2021 00:00:00').getTime();
@@ -128,7 +128,7 @@ $('.popover-dismiss').popover({
 });
 fetch("https://viko-api.herokuapp.com/api/about-info")
 	 .then(res=>res.json()).then(res=> {
-	 document.getElementById("speed-test").innerHTML = res.speed_server
+	 document.getElementById("speed-test").innerHTML = `Kecepatan merespon: ${res.speed_server}`
 });
 var countDownDate = localStorage.getItem('startDate'); 
 if (countDownDate) { 
