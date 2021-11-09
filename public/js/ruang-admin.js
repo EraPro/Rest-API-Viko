@@ -126,7 +126,10 @@ $(function () {
 $('.popover-dismiss').popover({
   trigger: 'focus'
 });
-
+fetch("https://viko-api.herokuapp.com/api/about-info")
+	 .then(res=>res.json()).then(res=> {
+	 document.getElementById("speed-test").innerHTML = res.speed_server
+});
 var countDownDate = localStorage.getItem('startDate'); 
 if (countDownDate) { 
     countDownDate = new Date(countDownDate); 
@@ -136,10 +139,6 @@ if (countDownDate) {
 } 
 // Update the count down every 1 second 
 var x = setInterval(function() { 
- fetch("https://viko-api.herokuapp.com/api/about-info")
-	 .then(res=>res.json()).then(res=> {
-	 document.getElementById("speed-test").innerHTML = res.speed_server
-});
     // Get todays date and time 
     var now = new Date().getTime(); 
  
