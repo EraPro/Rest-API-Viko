@@ -727,13 +727,13 @@ router.get('/pendidikan/brainly', async(req, res, next) => {
   if(!query) return res.json(loghandler.notquery)
   
   if(listkey.includes(apikey)){
-        brainly(query).then(res =>
-             res.json({
+	  .then(response => response.json())
+        brainly(query).then(res => res.json({
                  status : true,
                  creator : `${creator}`,
                  result : res
-             })
-        );
+		})
+        });
 } else {
 res.sendFile(__path + '/views/apikey-not-found.html');
 }
