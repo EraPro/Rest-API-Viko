@@ -128,7 +128,7 @@ $('.popover-dismiss').popover({
 });
 fetch("https://viko-api.herokuapp.com/api/about-info")
 	 .then(res=>res.json()).then(res=> {
-	 document.getElementById("speed-test").innerHTML = `Kecepatan merespon: ${res.speed_server}`
+	 document.getElementById("speed-test").innerHTML = `<strong>Kecepatan merespon:</strong> ${res.speed_server}`
 });
 var countDownDate = localStorage.getItem('startDate'); 
 if (countDownDate) { 
