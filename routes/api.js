@@ -728,15 +728,13 @@ router.get('/pendidikan/brainly', async(req, res, next) => {
   
   if(listkey.includes(apikey)){
         brainly(query).then(res => {
+        var result = hasil;
              res.json({
                  status : true,
                  creator : `${creator}`,
                  result : res
              })
         });
-         catch(e => {
-         	res.json(loghandler.error)
-})
 } else {
 res.sendFile(__path + '/views/apikey-not-found.html');
 }
