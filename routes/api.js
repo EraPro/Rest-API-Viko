@@ -720,25 +720,6 @@ res.sendFile(__path + '/views/apikey-not-found.html');
 }
 })
 
-router.get('/pendidikan/brainly', async(req, res, next) => {
-  const apikey = req.query.apikey;
-  const query = req.query.query;
-  if(!apikey) return res.json(loghandler.notparam)
-  if(!query) return res.json(loghandler.notquery)
-  
-  if(listkey.includes(apikey)){
-        brainly(query)
-        .then(res => res.json({
-                 status : true,
-                 creator : `${creator}`,
-                 result : res
-		})
-    });
-} else {
-res.sendFile(__path + '/views/apikey-not-found.html');
-}
-})
-
 router.get('/stalk/ig', async(req, res, next) => {
   const apikey = req.query.apikey;
   const query = req.query.query;
