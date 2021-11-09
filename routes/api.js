@@ -733,7 +733,7 @@ router.get('/pendidikan/brainly', async(req, res, next) => {
                  creator : `${creator}`,
                  result : res
              })
-        });
+        );
 } else {
 res.sendFile(__path + '/views/apikey-not-found.html');
 }
