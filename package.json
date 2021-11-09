@@ -22,6 +22,7 @@
     "url": "https://github.com/Zhirrr/Zhirrr-Api/issues"
   },
   "dependencies": {
+    "brainly-scraper": "^1.0.3",
     "performance-now": "^2.1.0",
     "systeminformation": "^5.9.9",
     "axios": "^0.21.1",
