@@ -248,7 +248,6 @@ res.json({
 speed_server : speednya,
 speed_millisec : speedsec
 })
-}
 });
 
 router.get('/music/joox', async(req, res, next) => {
