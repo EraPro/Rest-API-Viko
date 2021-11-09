@@ -152,7 +152,7 @@ var x = setInterval(function() {
     var seconds = Math.floor((distance % (1000 * 60)) / 1000); 
  
     // Output the result in an element with id="demo" 
-    document.getElementById("vikoo").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s <br>Speed: " + res.speed_server
+    document.getElementById("vikoo").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s" 
 }, 1000); 
 });
 // Version in Sidebar
