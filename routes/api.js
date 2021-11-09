@@ -727,8 +727,8 @@ router.get('/pendidikan/brainly', async(req, res, next) => {
   if(!query) return res.json(loghandler.notquery)
   
   if(listkey.includes(apikey)){
-	  .then(response => response.json())
-        brainly(query).then(res => res.json({
+        brainly(query)
+		.then(res => res.json({
                  status : true,
                  creator : `${creator}`,
                  result : res
