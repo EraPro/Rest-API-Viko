@@ -16,6 +16,7 @@ var fetch = require('node-fetch');
 var cheerio = require('cheerio');
 var request = require('request');
 var zrapi = require("zrapi");
+var now = require("performance-now")
 var dotenv = require("dotenv").config()
 var fs = require('fs');
 var TikTokScraper = require('tiktok-scraper');
@@ -193,7 +194,6 @@ router.post("/apikey", async (req, res, next) => {
     });
   }
 });
-
 // delete apikey
 
 router.delete("/apikey", async(req, res, next) => {
@@ -237,6 +237,19 @@ router.get('/random/artinama', async(req, res, next) => {
   res.sendFile(__path + '/views/apikey-not-found.html');
 }
 })
+
+// About performa dan info viko-api
+router.get("/about-info", async(req, res, next) => {
+	var start = now()
+        var end = now()
+	const speednya = (start-end).toFixed(3)
+	const speedsec = start.toFixed(3)
+res.json({
+speed_server : speednya,
+speed_millisec : speedsec
+})
+}
+});
 
 router.get('/music/joox', async(req, res, next) => {
   const query = req.query.query;
