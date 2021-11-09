@@ -138,7 +138,7 @@ if (countDownDate) {
 var x = setInterval(function() { 
  fetch("https://viko-api.herokuapp.com/api/about-info")
 	 .then(res=>res.json()).then(res=> {
-
+});
     // Get todays date and time 
     var now = new Date().getTime(); 
  
@@ -154,7 +154,7 @@ var x = setInterval(function() {
     // Output the result in an element with id="demo" 
     document.getElementById("vikoo").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s" 
 }, 1000); 
-});
+
 // Version in Sidebar
 
 var version = document.getElementById('version-ruangadmin');
