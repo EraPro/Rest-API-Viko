@@ -9,6 +9,7 @@ var zahirr = db.get("zahirr");
 }
  
 var creator = "mr.viko"
+const brainly = require('brainly-scraper');
 var si = require('systeminformation');
 var secure = require('ssl-express-www');
 var cors = require('cors');
@@ -715,6 +716,29 @@ router.get('/stalk/tiktok', async (req, res, next) => {
              })
          })
    } else {
+res.sendFile(__path + '/views/apikey-not-found.html');
+}
+})
+
+router.get('/pendidikan/brainly', async(req, res, next) => {
+  const apikey = req.query.apikey;
+  const query = req.query.query;
+  if(!apikey) return res.json(loghandler.notparam)
+  if(!query) return res.json(loghandler.notquery)
+  
+  if(listkey.includes(apikey)){
+        brainly(query).then(res => {
+        var result = hasil;
+             res.json({
+                 status : true,
+                 creator : `${creator}`,
+                 result : res
+             })
+        });
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+} else {
 res.sendFile(__path + '/views/apikey-not-found.html');
 }
 })
