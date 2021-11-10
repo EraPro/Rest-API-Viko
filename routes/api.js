@@ -297,6 +297,25 @@ router.get('/music/joox', async(req, res, next) => {
   }
 });
 
+router.get('/pendidikan/brainly', async(req, res, next) => {
+  const query = req.query.query;
+  const apikey = req.query.apikey;
+  
+  if(!query) return res.json(loghandler.notquery)
+  if(!apikey) return res.json(loghandler.notparam)
+  
+  if(listkey.includes(apikey)){
+   brainly(query)
+  .then((result) => {
+  res.json(result)
+    res.json(result)
+  });
+  } else {
+
+    res.sendFile(__path + '/views/apikey-not-found.html');
+  }
+});
+
 router.get('/hack/tlpn', async(req, res, next) => {
   const apikey = req.query.apikey;
   const query = req.query.query;
