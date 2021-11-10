@@ -2233,7 +2233,7 @@ router.get('/kuis/tebakGambar', async (req, res, next) => {
       code: 200,
       creator: `${creator}`,
       image: result.img,
-      jawaban: result.jawaban,
+      jawaban: `${result.jawaban}\n\nSumber rest api tebakgambar: https://cararegistrasi.com/viA9Zz`,
       clue: result.petunjuk
     }
     res.json(hasil)
