@@ -306,9 +306,9 @@ router.get('/pendidikan/brainly', async(req, res, next) => {
   
   if(listkey.includes(apikey)){
    brainly(query)
-  .then((result) => {
-  res.json(result)
-    res.json(result)
+  .then((res) => {
+  res.json(res)
+    res.json(res)
   });
   } else {
 
