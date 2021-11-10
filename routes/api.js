@@ -308,7 +308,6 @@ router.get('/pendidikan/brainly', async(req, res, next) => {
    brainly(query)
   .then((resultn) => {
  res.json(resultn)
- res.json(resultn)
   });
   } else {
 
