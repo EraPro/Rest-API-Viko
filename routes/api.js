@@ -307,10 +307,9 @@ router.get('/pendidikan/brainly', async(req, res, next) => {
   if(listkey.includes(apikey)){
    brainly(query)
   .then((data) => {
- res.json(data.res)
+ res.json(data)
   });
   } else {
-
     res.sendFile(__path + '/views/apikey-not-found.html');
   }
 });
