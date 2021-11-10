@@ -8,7 +8,7 @@ var zahirr = db.get("zahirr");
 	console.log('')  
 }
  
-var creator = "mr.viko"
+var creator = "Viko dwi kurniawan"
 const brainly = require('brainly-scraper');
 var si = require('systeminformation');
 var secure = require('ssl-express-www');
@@ -306,8 +306,8 @@ router.get('/pendidikan/brainly', async(req, res, next) => {
   
   if(listkey.includes(apikey)){
    brainly(query)
-  .then((resultn) => {
- res.json(resultn)
+  .then((res) => {
+ res.json(res)
   });
   } else {
 
