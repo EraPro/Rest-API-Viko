@@ -950,17 +950,21 @@ res.sendFile(__path + '/views/apikey-not-found.html');
 }
 })
 
-////Akhir update by Itskhyaa
+router.get('/database/micanbot', async (req, res, next) => {
+        var Apikey = req.query.apikey
+            
+	if(!Apikey) return res.json(loghandler.notparam)
+	if(listkey.includes(Apikey)){
 
-router.get('/micansbot/server', async (req, res, next) => {
-       fetch(encodeURI(`http://47.74.68.147:8000`))
+       fetch(encodeURI(`http://47.74.68.147:8000/`))
         .then(response => response.json())
         .then(data => {
-        var result = data;
+        var result = data
              res.json({
                  creator : `${creator}`,
                  result
              })
+         })
          .catch(e => {
          	res.json(loghandler.error)
 })
@@ -968,6 +972,7 @@ router.get('/micansbot/server', async (req, res, next) => {
 res.sendFile(__path + '/views/apikey-not-found.html');
 }
 })
+////Akhir update by Itskhyaa
 
 router.get('/random/pantun', async (req, res, next) => {
         var Apikey = req.query.apikey
