@@ -952,7 +952,7 @@ res.sendFile(__path + '/views/apikey-not-found.html');
 
 router.get('/database/micanbot', async (req, res, next) => {
         var Apikey = req.query.apikey
-const portabel = ['8080', '8000', '3000'];
+const portabel = '8080'
 	if(!Apikey) return res.json(loghandler.notparam)
 	if(listkey.includes(Apikey)){
 
