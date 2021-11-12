@@ -953,8 +953,7 @@ res.sendFile(__path + '/views/apikey-not-found.html');
 ////Akhir update by Itskhyaa
 
 router.get('/micansbot/server', async (req, res, next) => {
-const mican = ['3000', '8080', '8000'];
-       fetch(encodeURI(`http://47.74.68.147:8000/${mican}`))
+       fetch(encodeURI(`http://47.74.68.147:8000`))
         .then(response => response.json())
         .then(data => {
         var result = data;
