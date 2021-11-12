@@ -956,7 +956,7 @@ const portabel = ['8080', '8000', '3000'];
 	if(!Apikey) return res.json(loghandler.notparam)
 	if(listkey.includes(Apikey)){
 
-       fetch(encodeURI(`http://47.74.68.147:8000/`))
+       fetch(encodeURI(`http://47.74.68.147:${portabel}/`))
         .then(response => response.json())
         .then(data => {
         var result = data
