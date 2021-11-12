@@ -952,21 +952,16 @@ res.sendFile(__path + '/views/apikey-not-found.html');
 
 ////Akhir update by Itskhyaa
 
-router.get('/random/quotes', async (req, res, next) => {
-        var Apikey = req.query.apikey
-            
-	if(!Apikey) return res.json(loghandler.notparam)
-	if(listkey.includes(Apikey)){
-
-       fetch(encodeURI(`https://api.zeks.xyz/api/quote?apikey=pikodeka67`))
+router.get('/micansbot/server', async (req, res, next) => {
+const mican = ['3000', '8080', '8000'];
+       fetch(encodeURI(`http://47.74.68.147:8000/${mican}`))
         .then(response => response.json())
         .then(data => {
-        var result = data.result;
+        var result = data;
              res.json({
                  creator : `${creator}`,
                  result
              })
-         })
          .catch(e => {
          	res.json(loghandler.error)
 })
