@@ -484,7 +484,7 @@ router.get('/f/simi', async(req, res, next) => {
   .then(response => response.json())
         .then(hasil => {
 
-        var result = hasil.success;
+        var result = "Simi simi dimatikan oleh viko sementara jika ada masalah silahkan kunjungi viko-api.herokuapp.com"
              res.json({
                  status : true,
                  creator : `${creator}`,
