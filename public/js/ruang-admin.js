@@ -18,7 +18,31 @@ document.getElementById("tgl").innerHTML = tgl
 document.getElementById("bln").innerHTML = bulan
 document.getElementById("thn").innerHTML = thn
 
-
+function startTime() {
+  var x = navigator.onLine;
+  console.log(x)
+  setTimeout(startTime, 1000);
+  if(x == false){
+  const conect = `<div class="alert alert-warning alert-dismissible" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h6><i class="fas fa-exclamation-triangle"></i><b> Warning!</b></h6>
+                    Periksa jaringan internet anda:)
+                  </div>`
+  document.getElementById("notifini").innerHTML = conect;
+   }, 9000);
+  } else {
+    const conec = `<div class="alert alert-success alert-dismissible" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h6><i class="fas fa-check"></i><b> Warning!</b></h6>
+                    Anda terhubung ke jaringan kembali
+                  </div>`
+  document.getElementById("notifini1").innerHTML = conec;
+  }
+}
 function cb(response) {
     document.getElementById('visits').innerText = response.value
 }
