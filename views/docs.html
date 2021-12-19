@@ -892,6 +892,26 @@ body {
         }
           </script>
           <!-- Footer -->
+      <script>
+      function startTime() {
+  var xdf = navigator.onLine;
+  console.log(xdf)
+  setTimeout(startTime, 1000);
+  if(xdf == false){
+  const conect = `<div class="alert alert-warning alert-dismissible" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h6><i class="fas fa-exclamation-triangle"></i><b> Warning!</b></h6>
+                    Periksa jaringan internet anda:)
+                  </div>`
+  document.getElementById("notifini").innerHTML = conect;
+  }
+	document.addEventListener("DOMContentLoaded", function() {
+        startTime();
+    })
+}
+      </script>
           <!-- Footer -->
         </div>
         <footer class="sticky-footer bg-white">
@@ -931,12 +951,6 @@ body {
       <script>
         document.addEventListener("DOMContentLoaded", function() {
           vikoapi();
-        })
-        document.addEventListener("DOMContentLoaded", function() {
-          markue();
-        })
-        document.addEventListener("DOMContentLoaded", function() {
-          prosedur();
         })
       </script>
       <script>
