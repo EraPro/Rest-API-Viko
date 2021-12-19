@@ -896,7 +896,7 @@ body {
       function startTime() {
   var xdf = navigator.onLine
   console.log(xdf)
-  setTimeout(startTime, 1000)
+  setInterval(startTime, 1000)
   if(xdf == false){
   var conect = `<div class="alert alert-warning alert-dismissible" role="alert">
                     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
