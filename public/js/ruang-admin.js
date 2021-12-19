@@ -19,8 +19,9 @@ document.getElementById("bln").innerHTML = bulan
 document.getElementById("thn").innerHTML = thn
 
 function startTime() {
-  var x = navigator.onLine;
-  if(x == false){
+  var xdf = navigator.onLine;
+  setTimeout(startTime, 1000);
+  if(xdf == false){
   const conect = `<div class="alert alert-warning alert-dismissible" role="alert">
                     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                       <span aria-hidden="true">&times;</span>
@@ -31,6 +32,9 @@ function startTime() {
   document.getElementById("notifini").innerHTML = conect;
   }
 }
+document.addEventListener("DOMContentLoaded", function() {
+        startTime();
+})
 function cb(response) {
     document.getElementById('visits').innerText = response.value
 }
