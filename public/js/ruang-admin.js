@@ -18,24 +18,6 @@ document.getElementById("tgl").innerHTML = tgl
 document.getElementById("bln").innerHTML = bulan
 document.getElementById("thn").innerHTML = thn
 
-function startTime() {
-  var xdf = navigator.onLine;
-  console.log(xdf)
-  setTimeout(startTime, 1000);
-  if(xdf == false){
-  const conect = `<div class="alert alert-warning alert-dismissible" role="alert">
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                    </button>
-                    <h6><i class="fas fa-exclamation-triangle"></i><b> Warning!</b></h6>
-                    Periksa jaringan internet anda:)
-                  </div>`
-  document.getElementById("notifini").innerHTML = conect;
-  }
-	document.addEventListener("DOMContentLoaded", function() {
-        startTime();
-    })
-}
 function cb(response) {
     document.getElementById('visits').innerText = response.value
 }
