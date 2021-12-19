@@ -29,15 +29,6 @@ function startTime() {
                     Periksa jaringan internet anda:)
                   </div>`
   document.getElementById("notifini").innerHTML = conect;
-  } else {
-    const conec = `<div class="alert alert-success alert-dismissible" role="alert">
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                    </button>
-                    <h6><b>Rest API</b></h6>
-                    Perbaikan rest api viko realtime, memperbaiki bug yang ada, kemungkinan akan down server beberapa saat
-                  </div>`
-  document.getElementById("notifini1").innerHTML = conec;
   }
 }
 function cb(response) {
