@@ -31,7 +31,6 @@ function startTime() {
                     Periksa jaringan internet anda:)
                   </div>`
   document.getElementById("notifini").innerHTML = conect;
-   }, 9000);
   } else {
     const conec = `<div class="alert alert-success alert-dismissible" role="alert">
                     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
