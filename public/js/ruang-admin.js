@@ -20,7 +20,8 @@ document.getElementById("thn").innerHTML = thn
 
 function startTime() {
   var xdf = navigator.onLine;
-
+  console.log(xdf)
+  setTimeout(startTime, 1000);
   if(xdf == false){
   const conect = `<div class="alert alert-warning alert-dismissible" role="alert">
                     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -31,7 +32,6 @@ function startTime() {
                   </div>`
   document.getElementById("notifini").innerHTML = conect;
   }
-setTimeout(startTime, 1000);
 }
 function cb(response) {
     document.getElementById('visits').innerText = response.value
