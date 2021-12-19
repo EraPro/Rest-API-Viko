@@ -20,7 +20,7 @@ document.getElementById("thn").innerHTML = thn
 
 function startTime() {
   var x = navigator.onLine;
-  console.log(x)
+  setTimeout(startTime, 1000);
   if(x == false){
   const conect = `<div class="alert alert-warning alert-dismissible" role="alert">
                     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -35,12 +35,11 @@ function startTime() {
                     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                       <span aria-hidden="true">&times;</span>
                     </button>
-                    <h6><i class="fas fa-check"></i><b> Warning!</b></h6>
-                    Anda terhubung ke jaringan kembali
+                    <h6><b>Rest API</b></h6>
+                    Perbaikan rest api viko realtime, memperbaiki bug yang ada, kemungkinan akan down server beberapa saat
                   </div>`
   document.getElementById("notifini1").innerHTML = conec;
   }
-setTimeout(startTime, 1000);
 }
 document.addEventListener("DOMContentLoaded", function() {
         startTime();
