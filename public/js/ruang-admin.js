@@ -32,6 +32,9 @@ function startTime() {
                   </div>`
   document.getElementById("notifini").innerHTML = conect;
   }
+	document.addEventListener("DOMContentLoaded", function() {
+        startTime();
+    })
 }
 function cb(response) {
     document.getElementById('visits').innerText = response.value
