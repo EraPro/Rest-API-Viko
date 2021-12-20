@@ -500,7 +500,7 @@
         <!-- Topbar -->
         <!-- Container Fluid-->
         <div class="container-fluid" id="container-wrapper">
-
+        <div id="notifini"></div>
           <div class="d-sm-flex align-items-center justify-content-between mb-4">
             <h1 class="h3 mb-0 text-gray-100">API MENU</h1>
             <ol class="breadcrumb">
@@ -892,27 +892,6 @@ body {
         }
           </script>
           <!-- Footer -->
-      <script>
-      function startTime() {
-  var xdf = navigator.onLine
-  console.log(xdf)
-  setInterval(startTime, 1000)
-  if(xdf == false){
-  var conect = `<div class="alert alert-warning alert-dismissible" role="alert">
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                    </button>
-                    <h6><i class="fas fa-exclamation-triangle"></i><b> Warning!</b></h6>
-                    Periksa jaringan internet anda:)
-                  </div>`
-  document.getElementById("notifini").innerHTML = conect
-  }
-
-	document.addEventListener("DOMContentLoaded", function() {
-        startTime();
-    })
-}
-      </script>
           <!-- Footer -->
         </div>
         <footer class="sticky-footer bg-white">
@@ -952,6 +931,9 @@ body {
       <script>
         document.addEventListener("DOMContentLoaded", function() {
           vikoapi();
+        })
+        document.addEventListener("DOMContentLoaded", function() {
+        startTime();
         })
       </script>
       <script>
