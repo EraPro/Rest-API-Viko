@@ -21,7 +21,21 @@ document.getElementById("thn").innerHTML = thn
 function cb(response) {
     document.getElementById('visits').innerText = response.value
 }
-
+function startTime() {
+  var xdf = navigator.onLine
+  console.log(xdf)
+  setInterval(startTime, 1000)
+  if(xdf == false){
+  const conect = `<div class="alert alert-warning alert-dismissible" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h6><i class="fas fa-exclamation-triangle"></i><b> Warning!</b></h6>
+                    Periksa jaringan internet anda
+                  </div>`
+  document.getElementById("notifini").innerHTML = conect
+  }
+}
 var countDate = new Date('May 13 2021 00:00:00').getTime();
 
 function newYear(){
